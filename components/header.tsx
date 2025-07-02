@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Phone, MessageCircle, Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
+
 import {
   Sheet,
   SheetTrigger,
@@ -64,12 +65,6 @@ export function Header() {
               <div className="flex flex-col h-full">
                 <div className="flex items-center justify-between px-4 py-4 border-b">
                   <Logo />
-                  <SheetClose asChild>
-                    <Button variant="ghost" size="icon">
-                      <span className="sr-only">Close menu</span>
-                      <X className="w-6 h-6" />
-                    </Button>
-                  </SheetClose>
                 </div>
                 <nav className="flex flex-col gap-2 px-4 py-6">
                   {navLinks.map((link) => (
