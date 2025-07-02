@@ -12,10 +12,7 @@ export const Hero = () => {
           <h1 className="text-5xl font-bold text-gray-900 animate-fade-in-up">
             About Property Kraft
           </h1>
-          <p
-            className="text-xl text-gray-600 leading-relaxed animate-fade-in-up"
-            style={{ animationDelay: "0.2s" }}
-          >
+          <p className="text-xl text-gray-600 leading-relaxed animate-fade-in-up">
             Property Kraft is a professional property and facility management
             company providing tailored solutions across multiple residential and
             commercial sites. Established in 2025, our mission is to manage

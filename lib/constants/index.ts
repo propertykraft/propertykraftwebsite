@@ -1,1 +1,1 @@
-export const BASE_URL = "https://propertykraft.ng";
+export const BASE_URL = "https://property-kraft.vercel.app";

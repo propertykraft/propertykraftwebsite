@@ -87,7 +87,7 @@ export function Hero() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="group bg-transparent"
+                  className="group bg-transparent w-full"
                 >
                   <Phone className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />
                   Contact Us

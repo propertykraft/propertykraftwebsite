@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import {
   AchievementsPreview,
   BoardOfDirectors,
@@ -5,6 +6,12 @@ import {
   Hero,
   VisionAndMissionPreview,
 } from "./_components";
+
+export const metadata: Metadata = {
+  title: "Our Mission, Vision & Team",
+  description:
+    "Discover Property Kraft's mission, vision, and the dedicated team behind our success. Learn how we deliver trusted property and facility management solutions for residential and commercial clients across Africa.",
+};
 
 export default function AboutPage() {
   return (

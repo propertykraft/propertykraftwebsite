@@ -12,10 +12,7 @@ export const Hero = () => {
           <h1 className="text-5xl font-bold text-gray-900 animate-fade-in-up">
             Our Core Services
           </h1>
-          <p
-            className="text-xl text-gray-600 leading-relaxed animate-fade-in-up"
-            style={{ animationDelay: "0.2s" }}
-          >
+          <p className="text-xl text-gray-600 leading-relaxed animate-fade-in-up">
             We offer a wide range of professional property and facility
             management services designed to keep your buildings functional,
             secure, and efficient.

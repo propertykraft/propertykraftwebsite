@@ -12,10 +12,7 @@ export const Hero = () => {
           <h1 className="text-5xl font-bold text-gray-900 animate-fade-in-up">
             Contact and Support
           </h1>
-          <p
-            className="text-xl text-gray-600 leading-relaxed animate-fade-in-up"
-            style={{ animationDelay: "0.2s" }}
-          >
+          <p className="text-xl text-gray-600 leading-relaxed animate-fade-in-up">
             We're here to support residents, tenants, and partners. Reach out
             using the form below or through any of our direct contact channels.
           </p>
