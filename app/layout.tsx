@@ -1,13 +1,17 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { WhatsAppFloat } from "@/components/whatsapp-float";
+import { jsonLd, seoMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Property Kraft",
-  description: "Property Kraft",
+export const metadata: Metadata = seoMetadata;
+
+export const viewport: Viewport = {
+  userScalable: false,
+  maximumScale: 1.0,
+  initialScale: 1,
 };
 
 export default function RootLayout({
@@ -17,6 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body>
         <Header />
         {children}

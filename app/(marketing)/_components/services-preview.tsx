@@ -46,7 +46,7 @@ export function ServicesPreview() {
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <Image
                 src="/our-service-01.jpg"
-                alt="Professional property management team member"
+                alt="Professional property management"
                 className="w-full h-[500px] object-cover"
                 priority
                 width={500}
