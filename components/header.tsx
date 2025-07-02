@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Phone, MessageCircle, Menu, X, LogIn } from "lucide-react";
+import { MessageCircle, Menu, LogIn } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 import {
