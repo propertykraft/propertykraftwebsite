@@ -285,7 +285,7 @@ export const MainComponent = () => {
                 <div className="flex flex-col items-center space-y-2">
                   <Phone className="w-8 h-8 text-green-600" />
                   <h3 className="font-semibold">Phone</h3>
-                  <p className="text-gray-600">(555) 123-4567</p>
+                  <p className="text-gray-600">+234 816 549 0072</p>
                 </div>
                 <div className="flex flex-col items-center space-y-2">
                   <MapPin className="w-8 h-8 text-orange-600" />
