@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Phone, MessageCircle, Menu, X } from "lucide-react";
+import { Phone, MessageCircle, Menu, X, LogIn } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 import {
@@ -83,14 +83,15 @@ export function Header() {
                   ))}
                 </nav>
                 <div className="mt-auto flex flex-col gap-2 px-4 pb-6">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="flex items-center space-x-2 bg-transparent"
-                    onClick={() => window.open("tel:+2348165490072", "_self")}
-                  >
-                    <Phone className="w-4 h-4" />
-                    <span>Call Now</span>
+                  <Button variant="link" size="sm" asChild>
+                    <a
+                      href="https://www.getpanda.co"
+                      target="_blank"
+                      className="flex items-center space-x-2 bg-transparent"
+                    >
+                      <LogIn className="w-4 h-4" />
+                      <span>Client Login</span>
+                    </a>
                   </Button>
                   <Button
                     size="sm"
@@ -111,21 +112,22 @@ export function Header() {
         {/* Desktop Call/WhatsApp */}
         <div className="hidden md:flex items-center space-x-3">
           <Button
-            variant="outline"
-            size="sm"
-            className="flex items-center space-x-2 bg-transparent"
-            onClick={() => window.open("tel:+2348165490072", "_self")}
-          >
-            <Phone className="w-4 h-4" />
-            <span>Call Now</span>
-          </Button>
-          <Button
             size="sm"
             className="bg-orange-500 hover:bg-orange-600 text-white"
             onClick={() => window.open("https://wa.me/2348165490072", "_blank")}
           >
             <MessageCircle className="w-4 h-4 mr-2" />
             WhatsApp
+          </Button>
+          <Button variant="link" size="sm" asChild>
+            <a
+              href="https://www.getpanda.co"
+              target="_blank"
+              className="flex items-center space-x-2 bg-transparent"
+            >
+              <LogIn className="w-4 h-4" />
+              <span>Client Login</span>
+            </a>
           </Button>
         </div>
       </div>
