@@ -30,7 +30,7 @@ export const BoardOfDirectors = () => {
                   height={200}
                 />
               </div>
-              <div className="text-center space-y-3 flex-1 flex flex-col justify-between">
+              <div className="text-center space-y-3 flex-1 flex flex-col">
                 <h3 className="text-2xl font-semibold text-gray-900 mb-1">
                   {member.name}
                 </h3>
