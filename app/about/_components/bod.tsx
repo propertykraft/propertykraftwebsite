@@ -33,7 +33,6 @@ export const BoardOfDirectors = () => {
                 <h3 className="text-xl font-semibold text-gray-900">
                   {member.name}
                 </h3>
-                <div className="text-orange-500 font-medium">{member.role}</div>
                 <p className="text-gray-600 text-sm leading-relaxed">
                   {member.bio}
                 </p>
