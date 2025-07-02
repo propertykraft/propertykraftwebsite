@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { Logo } from "./logo";
+import { navLinks } from "./data";
 
 export function Footer() {
   return (
@@ -18,30 +19,14 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Quick Links</h3>
             <div className="space-y-2">
-              <Link
-                href="/"
-                className="block text-gray-400 hover:text-orange-500 transition-colors"
-              >
-                Home
-              </Link>
-              <Link
-                href="/about"
-                className="block text-gray-400 hover:text-orange-500 transition-colors"
-              >
-                About
-              </Link>
-              <Link
-                href="/services"
-                className="block text-gray-400 hover:text-orange-500 transition-colors"
-              >
-                Services
-              </Link>
-              <Link
-                href="/contact"
-                className="block text-gray-400 hover:text-orange-500 transition-colors"
-              >
-                Contact
-              </Link>
+              {navLinks.map(({ href, label }) => (
+                <Link
+                  href={href}
+                  className="block text-gray-400 hover:text-orange-500 transition-colors"
+                >
+                  {label}
+                </Link>
+              ))}
             </div>
           </div>
 
