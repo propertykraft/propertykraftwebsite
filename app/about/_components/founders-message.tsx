@@ -11,9 +11,6 @@ export const FoundersMessage = () => {
       <div className="container mx-auto px-4 relative">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center space-x-3 mb-8 justify-center">
-            <div className="w-12 h-12 bg-orange-600 rounded-xl flex items-center justify-center">
-              <MessageSquare className="w-6 h-6 text-white" />
-            </div>
             <h2 className="text-3xl font-bold">Founder's Message</h2>
           </div>
 

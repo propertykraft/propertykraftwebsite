@@ -29,7 +29,7 @@ export const boardMembers = [
   },
   {
     name: "Oladipo Omogbenigun",
-    bio: "Oladipo is a technology and commercial leader with extensive experience driving growth and operational excellence in Africa’s digital economy. He is currently the Sales Director, Enterprise at Smile ID, a leading identity verification company. Prior to this, he served as Senior Vice President at Moniepoint Inc., where he played a key role in scaling one of Africa’s foremost fintech platforms. Oladipo brings a strong blend of technical expertise, strategic sales leadership, and deep understanding of fintech and enterprise solutions to the board.",
+    bio: "Dipo is a technology and commercial leader with extensive years of experience driving growth and operational excellence across Africa’s digital and payment space.He has built major fintechs that have become unicorns (valuation over $1bn). Oladipo brings a strong blend of technical expertise, strategic sales leadership, and deep understanding of fintech and enterprise solutions to the board.",
     imgUrl: "/bod-dipo.jpeg",
   },
   {

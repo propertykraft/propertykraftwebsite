@@ -51,6 +51,8 @@ export const seoMetadata: Metadata = {
 
   keywords: [
     "Property Kraft",
+    "Property Craft",
+    "PropertyCraft",
     "property management",
     "facility management",
     "residential",
@@ -79,6 +81,7 @@ export const seoMetadata: Metadata = {
     "property cleaning",
     "property support",
     "property excellence",
+    "properties",
   ],
 
   authors: [{ name: "Property Kraft Team", url: BASE_URL }],

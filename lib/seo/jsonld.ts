@@ -30,6 +30,8 @@ export const jsonLd: WithContext<Organization> = {
   },
   keywords: [
     "Property Kraft",
+    "Property Craft",
+    "PropertyCraft",
     "property management",
     "facility management",
     "residential",
@@ -58,5 +60,6 @@ export const jsonLd: WithContext<Organization> = {
     "property cleaning",
     "property support",
     "property excellence",
+    "properties",
   ],
 };
