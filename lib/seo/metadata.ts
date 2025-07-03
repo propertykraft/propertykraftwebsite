@@ -124,7 +124,7 @@ export const seoMetadata: Metadata = {
   },
 
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title:
       "Property Kraft | Professional Property & Facility Management Solutions",
     description:
