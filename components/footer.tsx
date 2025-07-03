@@ -56,13 +56,13 @@ export function Footer() {
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link
-              href="/terms"
+              href="/legal?tab=terms"
               className="text-gray-400 hover:text-orange-500 transition-colors"
             >
               Terms of Service
             </Link>
             <Link
-              href="/privacy"
+              href="/legal?tab=privacy"
               className="text-gray-400 hover:text-orange-500 transition-colors"
             >
               Privacy Policy

@@ -76,13 +76,15 @@ export function Hero() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                size="lg"
-                className="bg-orange-500 hover:bg-orange-600 text-white group"
-              >
-                Explore Our Services
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <Link href="/services">
+                <Button
+                  size="lg"
+                  className="bg-orange-500 hover:bg-orange-600 text-white group"
+                >
+                  Explore Our Services
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
               <Link href="/contact">
                 <Button
                   variant="outline"

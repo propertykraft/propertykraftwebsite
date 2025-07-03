@@ -1,22 +1,44 @@
 "use client";
 import { Shield, FileText, Mail, Phone, MapPin } from "lucide-react";
+import { useSearchParams, useRouter } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export const MainComponent = () => {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const activeTab = searchParams.get("tab");
+
+  const handleTabChange = (tab: "privacy" | "terms") => {
+    const params = new URLSearchParams(Array.from(searchParams.entries()));
+    params.set("tab", tab);
+    router.push(`?${params.toString()}`);
+  };
+
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <Tabs defaultValue="privacy" className="w-full">
+          <Tabs
+            value={activeTab === "terms" ? "terms" : "privacy"}
+            className="w-full"
+          >
             <TabsList className="grid w-full grid-cols-2 mb-8">
-              <TabsTrigger value="privacy" className="flex items-center gap-2">
+              <TabsTrigger
+                value="privacy"
+                className="flex items-center gap-2"
+                onClick={() => handleTabChange("privacy")}
+              >
                 <Shield className="w-4 h-4" />
                 Privacy Policy
               </TabsTrigger>
-              <TabsTrigger value="terms" className="flex items-center gap-2">
+              <TabsTrigger
+                value="terms"
+                className="flex items-center gap-2"
+                onClick={() => handleTabChange("terms")}
+              >
                 <FileText className="w-4 h-4" />
                 Terms of Service
               </TabsTrigger>
