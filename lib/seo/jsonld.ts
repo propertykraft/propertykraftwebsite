@@ -20,13 +20,13 @@ export const jsonLd: WithContext<Organization> = {
     addressCountry: "NG",
   },
   telephone: "+234 816 549 0072",
-  email: "info@propertykraft.com",
+  email: "info@propertykraft.africa",
   areaServed: "Africa",
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+234 816 549 0072",
     contactType: "customer service",
-    email: "support@propertykraft.com",
+    email: "support@propertykraft.africa",
   },
   keywords: [
     "Property Kraft",

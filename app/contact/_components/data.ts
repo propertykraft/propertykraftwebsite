@@ -13,9 +13,9 @@ export const contactMethods = [
   {
     icon: Mail,
     title: "Email",
-    value: "info@propertykraft.com",
+    value: "info@propertykraft.africa",
     description: "Send us an email anytime",
-    action: () => window.open("mailto:info@propertykraft.com", "_self"),
+    action: () => window.open("mailto:info@propertykraft.africa", "_self"),
   },
   {
     icon: Phone,

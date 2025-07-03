@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { Suspense } from "react";
 
 import { Hero, MainComponent } from "./_components";
 
@@ -10,9 +11,11 @@ export const metadata: Metadata = {
 
 export default function LegalPage() {
   return (
-    <main className="min-h-screen bg-gray-50">
-      <Hero />
-      <MainComponent />
-    </main>
+    <Suspense fallback="Please wait...">
+      <main className="min-h-screen bg-gray-50">
+        <Hero />
+        <MainComponent />
+      </main>
+    </Suspense>
   );
 }

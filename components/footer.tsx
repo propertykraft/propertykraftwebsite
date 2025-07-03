@@ -43,7 +43,7 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Contact Info</h3>
             <div className="space-y-2 text-gray-400">
-              <div>Email: info@propertykraft.com</div>
+              <div>Email: info@propertykraft.africa</div>
               <div>Phone: +234 816 549 0072</div>
               <div>Hours: Mon-Fri, 9 AM – 6 PM</div>
             </div>

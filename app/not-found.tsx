@@ -53,7 +53,7 @@ export default function NotFound() {
                 <div>
                   <div className="font-medium">Email us</div>
                   <div className="text-sm text-gray-600">
-                    info@propertykraft.com
+                    info@propertykraft.africa
                   </div>
                 </div>
               </div>

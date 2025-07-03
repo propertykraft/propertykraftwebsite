@@ -302,7 +302,7 @@ export const MainComponent = () => {
                 <div className="flex flex-col items-center space-y-2">
                   <Mail className="w-8 h-8 text-blue-600" />
                   <h3 className="font-semibold">Email</h3>
-                  <p className="text-gray-600">legal@propertykraft.com</p>
+                  <p className="text-gray-600">legal@propertykraft.africa</p>
                 </div>
                 <div className="flex flex-col items-center space-y-2">
                   <Phone className="w-8 h-8 text-green-600" />
