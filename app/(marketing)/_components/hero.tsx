@@ -79,7 +79,7 @@ export function Hero() {
               <Link href="/services">
                 <Button
                   size="lg"
-                  className="bg-orange-500 hover:bg-orange-600 text-white group"
+                  className="bg-orange-500 hover:bg-orange-600 text-white group w-full"
                 >
                   Explore Our Services
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
