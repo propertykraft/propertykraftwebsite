@@ -5,7 +5,7 @@ import { BASE_URL } from "../constants";
 export const jsonLd: WithContext<Organization> = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Property Kraft",
+  name: "Property Kraft Africa",
   url: BASE_URL,
   logo: `${BASE_URL}/logo-icon.png`,
   description:
@@ -13,7 +13,7 @@ export const jsonLd: WithContext<Organization> = {
   image: `${BASE_URL}/og-image.png`,
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Todo: update address",
+    streetAddress: "17, Ayinde Akinmade Street, Lekki Phase 1 Lagos State",
     addressLocality: "Lagos",
     addressRegion: "LA",
     postalCode: "100001",
@@ -29,8 +29,9 @@ export const jsonLd: WithContext<Organization> = {
     email: "support@propertykraft.africa",
   },
   keywords: [
+    "Property Kraft Africa",
     "Property Kraft",
-    "Property Craft",
+    "Property Craft Africa",
     "PropertyCraft",
     "property management",
     "facility management",
@@ -61,5 +62,6 @@ export const jsonLd: WithContext<Organization> = {
     "property support",
     "property excellence",
     "properties",
+    "Lagos",
   ],
 };

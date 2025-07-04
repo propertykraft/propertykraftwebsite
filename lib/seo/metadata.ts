@@ -8,8 +8,8 @@ export const seoMetadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
     default:
-      "Property Kraft | Professional Property & Facility Management Solutions",
-    template: "%s | Property Kraft",
+      "Property Kraft Africa | Professional Property & Facility Management Solutions",
+    template: "%s | Property Kraft Africa",
   },
   description:
     "Property Kraft delivers trusted, end-to-end property and facility management for residential and commercial properties. Our tailored solutions maximize value, ensure seamless service, and provide full operational transparency. Experience Africa's benchmark for excellence in property management.",
@@ -50,8 +50,9 @@ export const seoMetadata: Metadata = {
   },
 
   keywords: [
+    "Property Kraft Africa",
     "Property Kraft",
-    "Property Craft",
+    "Property Craft Africa",
     "PropertyCraft",
     "property management",
     "facility management",
@@ -82,12 +83,13 @@ export const seoMetadata: Metadata = {
     "property support",
     "property excellence",
     "properties",
+    "Lagos",
   ],
 
   authors: [{ name: "Property Kraft Team", url: BASE_URL }],
   category: "Property & Facility Management",
-  creator: "Property Kraft",
-  publisher: "Property Kraft",
+  creator: "Property Kraft Africa",
+  publisher: "Property Kraft Africa",
 
   robots: {
     index: true,
@@ -107,9 +109,9 @@ export const seoMetadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: BASE_URL,
-    siteName: "Property Kraft",
+    siteName: "Property Kraft Africa",
     title:
-      "Property Kraft | Professional Property & Facility Management Solutions",
+      "Property Kraft Africa | Professional Property & Facility Management Solutions",
     description:
       "Property Kraft delivers trusted, end-to-end property and facility management for residential and commercial properties. Our tailored solutions maximize value, ensure seamless service, and provide full operational transparency.",
     images: [
@@ -126,7 +128,7 @@ export const seoMetadata: Metadata = {
   twitter: {
     card: "summary",
     title:
-      "Property Kraft | Professional Property & Facility Management Solutions",
+      "Property Kraft Africa | Professional Property & Facility Management Solutions",
     description:
       "Property Kraft delivers trusted, end-to-end property and facility management for residential and commercial properties. Our tailored solutions maximize value, ensure seamless service, and provide full operational transparency.",
     creator: "@propertykraft",
