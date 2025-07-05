@@ -17,25 +17,25 @@ export const seoMetadata: Metadata = {
   icons: {
     icon: [
       {
-        url: `${BASE_URL}/favicon.ico`,
+        url: `${BASE_URL}/favicon.ico?v=${VERSION}`,
         rel: "icon",
         type: "image/x-icon",
         sizes: "48x48",
       },
       {
-        url: `${BASE_URL}/android-chrome-192x192.png`,
+        url: `${BASE_URL}/android-chrome-192x192.png?v=${VERSION}`,
         type: "image/png",
         sizes: "192x192",
       },
       {
-        url: `${BASE_URL}/android-chrome-512x512.png`,
+        url: `${BASE_URL}/android-chrome-512x512.png?v=${VERSION}`,
         type: "image/png",
         sizes: "512x512",
       },
     ],
     apple: [
       {
-        url: `${BASE_URL}/apple-touch-icon.png`,
+        url: `${BASE_URL}/apple-touch-icon.png?v=${VERSION}`,
         rel: "apple-touch-icon",
         sizes: "180x180",
       },
@@ -43,8 +43,7 @@ export const seoMetadata: Metadata = {
     other: [
       {
         rel: "mask-icon",
-        url: `${BASE_URL}/favicon.svg`,
-        color: "#4d1481",
+        url: `${BASE_URL}/favicon.svg?v=${VERSION}`,
       },
     ],
   },
@@ -84,6 +83,14 @@ export const seoMetadata: Metadata = {
     "property excellence",
     "properties",
     "Lagos",
+    "Lekki",
+    "Victoria Island",
+    "Ikoyi",
+    "property management Lagos",
+    "facility management Nigeria",
+    "property management Lekki",
+    "facility management Victoria Island",
+    "residential property management services Lagos",
   ],
 
   authors: [{ name: "Property Kraft Team", url: BASE_URL }],
@@ -126,12 +133,45 @@ export const seoMetadata: Metadata = {
   },
 
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title:
       "Property Kraft Africa | Professional Property & Facility Management Solutions",
     description:
       "Property Kraft delivers trusted, end-to-end property and facility management for residential and commercial properties. Our tailored solutions maximize value, ensure seamless service, and provide full operational transparency.",
     creator: "@propertykraft",
+    site: "@propertykraft",
     images: [`${BASE_URL}/og-image.png?v=${VERSION}`],
+  },
+
+  alternates: {
+    canonical: BASE_URL,
+  },
+
+  // verification: {
+  //   google: "google-verification-code",
+  //   yandex: "yandex-verification-code",
+  // },
+
+  other: {
+    "geo.region": "NG-LA",
+    "geo.placename": "Lekki, Lagos State",
+    "geo.position": "6.5244;3.3792",
+    ICBM: "6.5244, 3.3792",
+    "DC.title":
+      "Property Kraft Africa | Professional Property & Facility Management Solutions",
+    "DC.creator": "Property Kraft Africa",
+    "DC.subject":
+      "Property Management, Facility Management, Real Estate Services",
+    "DC.description":
+      "Property Kraft delivers trusted, end-to-end property and facility management for residential and commercial properties.",
+    "DC.publisher": "Property Kraft Africa",
+    "DC.contributor": "Property Kraft Team",
+    "DC.date": new Date().toISOString(),
+    "DC.type": "Service",
+    "DC.format": "text/html",
+    "DC.identifier": BASE_URL,
+    "DC.language": "en",
+    "DC.coverage": "Lagos",
+    "DC.rights": "Copyright © 2025 Property Kraft Africa. All rights reserved.",
   },
 };

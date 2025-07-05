@@ -148,7 +148,7 @@ export function Hero() {
                     <div className="text-2xl font-bold text-gray-900">
                       Trusted Partner
                     </div>
-                    <div className="text-sm text-gray-600">Since 2025</div>
+                    <div className="text-sm text-gray-600">Since 2020</div>
                   </div>
                 </div>
               </div>

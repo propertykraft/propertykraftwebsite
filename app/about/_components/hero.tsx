@@ -15,7 +15,7 @@ export const Hero = () => {
           <p className="text-xl text-gray-600 leading-relaxed animate-fade-in-up">
             Property Kraft is a professional property and facility management
             company providing tailored solutions across multiple residential and
-            commercial sites. Established in 2025, our mission is to manage
+            commercial sites. Established in 2020, our mission is to manage
             every property with care, professionalism, and operational
             excellence.
           </p>

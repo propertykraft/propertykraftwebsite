@@ -1,4 +1,6 @@
 import type { Metadata, Viewport } from "next";
+import Head from "next/head";
+
 import "./globals.css";
 
 import { Header } from "@/components/header";
@@ -21,12 +23,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-      </head>
+      </Head>
       <body>
         <Header />
         {children}

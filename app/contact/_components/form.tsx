@@ -206,7 +206,7 @@ export const ContactForm = () => {
                 <div className="font-semibold text-gray-900">
                   Facility Manager: Miracle
                 </div>
-                <div className="text-gray-600">Phone: 08165490072</div>
+                <div className="text-gray-600">Phone: +234 816 549 0072</div>
                 <div className="text-gray-600">
                   For urgent matters requiring immediate attention
                 </div>

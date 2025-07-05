@@ -313,9 +313,9 @@ export const MainComponent = () => {
                   <MapPin className="w-8 h-8 text-orange-600" />
                   <h3 className="font-semibold">Address</h3>
                   <p className="text-gray-600">
-                    123 Business Ave
+                    17, Ayinde Akinmade Street, Lekki Phase 1,
                     <br />
-                    Suite 100
+                    Lagos
                   </p>
                 </div>
               </div>

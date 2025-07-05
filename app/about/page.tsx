@@ -5,6 +5,8 @@ import {
   FoundersMessage,
   Hero,
   VisionAndMissionPreview,
+  Leadership,
+  TeamMembers,
 } from "./_components";
 
 export const metadata: Metadata = {
@@ -21,6 +23,8 @@ export default function AboutPage() {
       <VisionAndMissionPreview />
       <FoundersMessage />
       <BoardOfDirectors />
+      <Leadership />
+      <TeamMembers />
     </main>
   );
 }
