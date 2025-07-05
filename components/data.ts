@@ -12,6 +12,10 @@ export const navLinks = [
     href: "/services",
   },
   {
+    label: "FAQ",
+    href: "/faq",
+  },
+  {
     label: "Contact",
     href: "/contact",
   },

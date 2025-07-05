@@ -38,7 +38,7 @@ export function Header() {
         <Logo />
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden lg:flex items-center space-x-8">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -53,7 +53,7 @@ export function Header() {
         </nav>
 
         {/* Mobile Hamburger */}
-        <div className="md:hidden flex items-center">
+        <div className="lg:hidden flex items-center">
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="mr-2">
@@ -109,8 +109,7 @@ export function Header() {
           </Sheet>
         </div>
 
-        {/* Desktop Call/WhatsApp */}
-        <div className="hidden md:flex items-center space-x-3">
+        <div className="hidden lg:flex items-center space-x-3">
           <Button
             size="sm"
             className="bg-orange-500 hover:bg-orange-600 text-white"
