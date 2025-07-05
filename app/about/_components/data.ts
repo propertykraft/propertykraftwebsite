@@ -50,14 +50,14 @@ export const teamMembers = [
   {
     name: "Collins Ishioku",
     role: "Operations",
-    bio: "",
-    imgUrl: "",
+    bio: "Collins is a results-driven operations professional with over four years of experience in facility management and day-to-day operational oversight. He specializes in streamlining processes, improving efficiency, and ensuring seamless service delivery across properties. At Property Kraft, Collins plays a key role in maintaining operational excellence and delivering on our promise of reliability and speed.",
+    imgUrl: "/team-collins.jpeg",
   },
   {
     name: "Sonia Akpati",
     role: "Product",
-    bio: "",
-    imgUrl: "",
+    bio: "Sonia leads product and design at Property Kraft, creating intuitive, user-focused solutions for property and rental management. With a strong background in UI/UX and product development, she bridges design, tech, and operations to deliver seamless digital experiences that drive innovation in rental real estate.",
+    imgUrl: "/team-sonia.jpeg",
   },
   {
     name: "Miracle Ajima ",
@@ -68,19 +68,19 @@ export const teamMembers = [
   {
     name: "Ajiri Osiobe",
     role: "Engineering",
-    bio: "",
-    imgUrl: "",
+    bio: "Ajiri is a versatile Fullstack Engineer at Property Kraft, building scalable web and mobile solutions with technologies like React, React Native, Node.js, and NestJS. With experience across fintech, real estate, and e-commerce, he delivers secure, high-performance platforms and brings a strong sense of ownership, precision, and business alignment to every project.",
+    imgUrl: "/team-ajiri.jpeg",
   },
   {
     name: "Somtochukwu Nkem",
     role: "Engineering",
-    bio: "",
-    imgUrl: "",
+    bio: "Somto is a seasoned software engineer with deep experience building scalable products across fintech, mobility, and real estate. As part of the engineering team at Property Kraft, he works on the development of secure, high-performing systems that power our digital rental and property management platforms. With a strong background in backend infrastructure, payments, and platform architecture, Somto brings technical excellence and strategic thinking to every layer of our tech stack.",
+    imgUrl: "/team-somto.jpeg",
   },
   {
     name: "Promise Nkwocha ",
     role: "Executive Assistant",
-    bio: "",
-    imgUrl: "",
+    bio: "Promise is an Executive Assistant at Property Kraft, providing high-level administrative support to ensure seamless daily operations. She plays a key role in driving strategic initiatives forward, keeping the team organized, aligned, and on track. With a passion for structure, communication, and efficiency, Promise helps power the rhythm behind the company’s execution.",
+    imgUrl: "/team-promise.jpeg",
   },
 ];
