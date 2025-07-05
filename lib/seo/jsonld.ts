@@ -20,14 +20,14 @@ export const jsonLd: WithContext<Organization> = {
     addressCountry: "NG",
   },
   telephone: "+234 816 549 0072",
-  email: "info@propertykraft.africa",
+  email: "hello@propertykraft.africa",
   areaServed: "Lagos",
   contactPoint: [
     {
       "@type": "ContactPoint",
       telephone: "+234 816 549 0072",
       contactType: "customer service",
-      email: "support@propertykraft.africa",
+      email: "hello@propertykraft.africa",
       availableLanguage: "English",
       hoursAvailable: {
         "@type": "OpeningHoursSpecification",
