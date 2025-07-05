@@ -7,7 +7,7 @@ export const Leadership = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 tracking-wide uppercase">
-            Leadership
+            Founder
           </h2>
         </div>
         <div className="flex flex-col lg:flex-row items-center bg-gray-50 p-0 gap-10 lg:gap-20">

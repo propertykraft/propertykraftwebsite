@@ -4,7 +4,7 @@ import { boardMembers } from "./data";
 export const BoardOfDirectors = () => {
   return (
     <section className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900">Advisory Board</h2>
         </div>
@@ -12,7 +12,7 @@ export const BoardOfDirectors = () => {
           {boardMembers.map((member, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-100 max-w-[280px] mx-auto flex flex-col p-0 transition-all duration-300 hover:shadow-lg"
+              className="bg-white border border-gray-100 max-w-80 mx-auto flex flex-col p-0 transition-all duration-300 hover:shadow-lg"
             >
               <div className="w-full aspect-square overflow-hidden flex items-center justify-center">
                 <Image
@@ -25,9 +25,6 @@ export const BoardOfDirectors = () => {
                 />
               </div>
               <div className="flex-1 flex flex-col items-start px-4 py-4">
-                <div className="text-xs text-gray-500 tracking-widest mb-2 uppercase">
-                  Advisory Board
-                </div>
                 <h3 className="text-lg font-bold text-orange-500 mb-2 leading-tight">
                   {member.name}
                 </h3>

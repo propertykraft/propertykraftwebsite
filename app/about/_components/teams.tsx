@@ -4,7 +4,7 @@ import { teamMembers } from "./data";
 export const TeamMembers = () => {
   return (
     <section className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900">Team</h2>
         </div>
@@ -12,7 +12,7 @@ export const TeamMembers = () => {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-100 max-w-[280px] mx-auto flex flex-col p-0 transition-all duration-300 hover:shadow-lg"
+              className="bg-white border border-gray-100 max-w-80 mx-auto flex flex-col p-0 transition-all duration-300 hover:shadow-lg"
             >
               {member.imgUrl && (
                 <div className="w-full aspect-square overflow-hidden flex items-center justify-center">
