@@ -1,3 +1,4 @@
+import { BASE_URL } from "@/lib/constants";
 import { FAQItem } from "./data";
 
 interface FAQSchemaProps {
@@ -17,6 +18,7 @@ export function FAQSchema({ faqs }: FAQSchemaProps) {
         text: faq.answer,
       },
     })),
+    url: BASE_URL,
   };
 
   return (

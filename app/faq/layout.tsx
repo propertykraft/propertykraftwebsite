@@ -25,13 +25,15 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${BASE_URL}/og-faq.jpg?v=${new Date()}`,
+        url: `/og-faq.jpg?v=${new Date()}`,
         width: 1200,
         height: 630,
         alt: "Q&A",
         type: "image/jpg",
       },
     ],
+    url: BASE_URL,
+    siteName: "Property Kraft Africa",
   },
 };
 

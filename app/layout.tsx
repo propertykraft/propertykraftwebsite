@@ -11,7 +11,7 @@ export const metadata: Metadata = seoMetadata;
 
 export const viewport: Viewport = {
   userScalable: false,
-  maximumScale: 1.0,
+  maximumScale: 5.0,
   initialScale: 1,
 };
 
