@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import { faqData, FAQSchema } from "./_components";
 import { BASE_URL } from "@/lib/constants";
-import { createCanonicalMetadata } from "@/lib/seo/canonical";
+import { createCanonicalMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions",

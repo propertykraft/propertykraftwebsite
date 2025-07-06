@@ -24,6 +24,7 @@ export default function NotFound() {
             <Button
               size="lg"
               className="bg-orange-600 hover:bg-orange-700 text-white"
+              aria-label="Back to home"
             >
               <Home className="w-5 h-5 mr-2" />
               Go Home
@@ -60,7 +61,7 @@ export default function NotFound() {
             </div>
 
             <div className="mt-6 pt-6 border-t border-gray-200">
-              <h4 className="font-medium mb-3">Popular Pages</h4>
+              <h3 className="font-medium mb-3 text-base">Popular Pages</h3>
               <div className="grid grid-cols-2 gap-2 text-sm">
                 <Link href="/about" className="text-orange-600 hover:underline">
                   About Us

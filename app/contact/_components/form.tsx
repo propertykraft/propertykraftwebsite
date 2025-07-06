@@ -205,7 +205,7 @@ export const ContactForm = () => {
               </div>
               <div className="space-y-3">
                 <div className="font-semibold text-gray-900">
-                  Facility Manager: Miracle
+                  Facility Manager: Miracle Ajima
                 </div>
                 <div className="text-gray-600">Phone: +234 816 549 0072</div>
                 <div className="text-gray-600">
