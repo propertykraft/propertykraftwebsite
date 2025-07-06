@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import { faqData, FAQSchema } from "./_components";
 import { BASE_URL } from "@/lib/constants";
+import { createCanonicalMetadata } from "@/lib/seo/canonical";
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions",
@@ -32,9 +33,10 @@ export const metadata: Metadata = {
         type: "image/jpg",
       },
     ],
-    url: BASE_URL,
+    url: `${BASE_URL}/faq`,
     siteName: "Property Kraft Africa",
   },
+  ...createCanonicalMetadata("faq"),
 };
 
 export default function FAQLayout({
