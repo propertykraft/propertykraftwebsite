@@ -34,7 +34,6 @@ export const metadata: Metadata = {
       },
     ],
     url: `${BASE_URL}/faq`,
-    siteName: "Property Kraft Africa",
   },
   ...createCanonicalMetadata("faq"),
 };

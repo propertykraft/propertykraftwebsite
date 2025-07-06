@@ -1,10 +1,21 @@
-import { ContactForm, Hero, ContactMethods } from "./_components";
+import { BASE_URL } from "@/lib/constants";
 import { Metadata } from "next";
+
+import { ContactForm, Hero, ContactMethods } from "./_components";
+import { createCanonicalMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Get in Touch",
   description:
     "Reach out to Property Kraft for inquiries, support, or partnership opportunities. Our team is ready to assist you with all your property and facility management needs.",
+  openGraph: {
+    title: "Frequently Asked Questions - Property Kraft Africa",
+    description:
+      "Get answers to common questions about Property Kraft Africa's property and facility management services.",
+
+    url: `${BASE_URL}/contact`,
+  },
+  ...createCanonicalMetadata("contact"),
 };
 
 export default function ContactPage() {
