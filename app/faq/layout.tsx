@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `/og-faq.jpg?v=${new Date()}`,
+        url: `${BASE_URL}/og-faq.jpg`,
         width: 1200,
         height: 630,
         alt: "Q&A",
