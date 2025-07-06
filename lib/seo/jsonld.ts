@@ -40,7 +40,7 @@ export const jsonLd: WithContext<Organization> = {
   foundingDate: "2020",
   numberOfEmployees: {
     "@type": "QuantitativeValue",
-    value: "10+",
+    value: 10,
   },
   serviceArea: {
     "@type": "GeoCircle",
