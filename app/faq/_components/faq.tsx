@@ -37,6 +37,7 @@ export function FAQ() {
                     ? "bg-orange-500 text-white"
                     : "bg-orange-50/50 text-gray-700 hover:bg-orange-50"
                 }`}
+                aria-label="FAQ category"
               >
                 {category}
               </button>
@@ -52,6 +53,7 @@ export function FAQ() {
                 <button
                   onClick={() => toggleItem(index)}
                   className="w-full px-6 py-4 text-left bg-orange-50/10 hover:bg-orange-50 transition-colors flex justify-between items-center"
+                  aria-label="FAQ item"
                 >
                   <h3 className="text-lg font-medium text-gray-900 pr-4">
                     {faq.question}
@@ -88,6 +90,7 @@ export function FAQ() {
                 variant="outline"
                 size="lg"
                 className="group bg-orange-500 text-white hover:bg-orange-600 hover:text-white"
+                aria-label="Contact us"
               >
                 <Phone className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />
                 Contact Us

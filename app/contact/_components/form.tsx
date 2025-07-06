@@ -139,6 +139,7 @@ export const ContactForm = () => {
                   type="submit"
                   disabled={isSubmitting}
                   className="w-full bg-orange-500 hover:bg-orange-600 text-white transition-all duration-300 hover:shadow-lg"
+                  aria-label="Send a message"
                 >
                   {isSubmitting ? (
                     <>

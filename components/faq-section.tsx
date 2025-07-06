@@ -47,6 +47,7 @@ export function FAQSection({
                 <button
                   onClick={() => toggleItem(index)}
                   className="w-full px-6 py-4 text-left hover:bg-gray-50 transition-colors flex justify-between items-center"
+                  aria-label={faq.question}
                 >
                   <h3 className="text-lg font-medium text-gray-900 pr-4">
                     {faq.question}

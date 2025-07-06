@@ -21,7 +21,16 @@ export const jsonLd: WithContext<Organization> = {
   },
   telephone: "+234 816 549 0072",
   email: "hello@propertykraft.africa",
-  areaServed: "Lagos",
+  areaServed: {
+    "@type": "Place",
+    name: "Lagos",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Lagos",
+      addressRegion: "Lagos State",
+      addressCountry: "NG",
+    },
+  },
   contactPoint: [
     {
       "@type": "ContactPoint",
@@ -32,8 +41,8 @@ export const jsonLd: WithContext<Organization> = {
       hoursAvailable: {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        opens: "09:00",
-        closes: "18:00",
+        opens: "09:00:00",
+        closes: "18:00:00",
       },
     },
   ],
@@ -41,15 +50,6 @@ export const jsonLd: WithContext<Organization> = {
   numberOfEmployees: {
     "@type": "QuantitativeValue",
     value: 10,
-  },
-  serviceArea: {
-    "@type": "GeoCircle",
-    geoMidpoint: {
-      "@type": "GeoCoordinates",
-      latitude: 6.5244,
-      longitude: 3.3792,
-    },
-    geoRadius: "100000",
   },
   keywords: [
     "Property Kraft Africa",

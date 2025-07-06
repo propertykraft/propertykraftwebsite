@@ -77,6 +77,7 @@ export function ServicesPreview() {
             <Button
               size="lg"
               className="bg-orange-500 hover:bg-orange-600 text-white"
+              aria-label="View All Services"
             >
               View All Services
             </Button>

@@ -80,6 +80,7 @@ export function Hero() {
                 <Button
                   size="lg"
                   className="bg-orange-500 hover:bg-orange-600 text-white group w-full"
+                  aria-label="Explore our services"
                 >
                   Explore Our Services
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -90,6 +91,7 @@ export function Hero() {
                   variant="outline"
                   size="lg"
                   className="group bg-transparent w-full"
+                  aria-label="Contact us"
                 >
                   <Phone className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />
                   Contact Us

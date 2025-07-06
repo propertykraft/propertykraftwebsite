@@ -123,7 +123,7 @@ export const seoMetadata: Metadata = {
       "Property Kraft delivers trusted, end-to-end property and facility management for residential and commercial properties. Our tailored solutions maximize value, ensure seamless service, and provide full operational transparency.",
     images: [
       {
-        url: `${BASE_URL}/og-image.png?v=${VERSION}`,
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Property Kraft Property & Facility Management",

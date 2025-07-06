@@ -25,6 +25,7 @@ export function Hero() {
               variant="outline"
               size="lg"
               className="group bg-transparent hover:bg-orange-500 hover:text-white mt-8"
+              aria-label="Contact Us"
             >
               <Phone className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />
               Contact Us

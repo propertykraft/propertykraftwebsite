@@ -14,10 +14,16 @@ export const Cta = () => {
             with excellence and professionalism.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-white text-orange-500 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
+            <button
+              className="px-8 py-4 bg-white text-orange-500 rounded-xl font-semibold hover:bg-gray-100 transition-colors"
+              aria-label="Get a Quote"
+            >
               Get a Quote
             </button>
-            <button className="px-8 py-4 border-2 border-white text-white rounded-xl font-semibold hover:bg-white hover:text-orange-500 transition-colors">
+            <button
+              className="px-8 py-4 border-2 border-white text-white rounded-xl font-semibold hover:bg-white hover:text-orange-500 transition-colors"
+              aria-label="Chat on WhatsApp"
+            >
               Chat on WhatsApp
             </button>
           </div>

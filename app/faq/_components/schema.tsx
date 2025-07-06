@@ -8,6 +8,7 @@ export function FAQSchema({ faqs }: FAQSchemaProps) {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    name: "FAQ - Property Kraft Africa",
     mainEntity: faqs.map((faq) => ({
       "@type": "Question",
       name: faq.question,

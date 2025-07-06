@@ -23,6 +23,7 @@ export function AboutPreview() {
               size="lg"
               variant="outline"
               className="group bg-transparent mt-6"
+              aria-label="Learn more about us"
             >
               Learn More About Us
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />

@@ -83,7 +83,12 @@ export function Header() {
                   ))}
                 </nav>
                 <div className="mt-auto flex flex-col gap-2 px-4 pb-6">
-                  <Button variant="link" size="sm" asChild>
+                  <Button
+                    variant="link"
+                    size="sm"
+                    asChild
+                    aria-label="Client Login"
+                  >
                     <a
                       href="https://www.getpanda.co"
                       target="_blank"
@@ -99,6 +104,7 @@ export function Header() {
                     onClick={() =>
                       window.open("https://wa.me/2348165490072", "_blank")
                     }
+                    aria-label="Chat us on whatsapp"
                   >
                     <MessageCircle className="w-4 h-4 mr-2" />
                     WhatsApp
@@ -114,11 +120,12 @@ export function Header() {
             size="sm"
             className="bg-orange-500 hover:bg-orange-600 text-white"
             onClick={() => window.open("https://wa.me/2348165490072", "_blank")}
+            aria-label="Chat us on whatsapp"
           >
             <MessageCircle className="w-4 h-4 mr-2" />
             WhatsApp
           </Button>
-          <Button variant="link" size="sm" asChild>
+          <Button variant="link" size="sm" asChild aria-label="Client Login">
             <a
               href="https://www.getpanda.co"
               target="_blank"
