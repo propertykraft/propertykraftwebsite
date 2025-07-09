@@ -29,7 +29,7 @@ export const contactMethods = [
     title: "WhatsApp Chat",
     value: "Chat Now",
     description: "Quick response guaranteed",
-    action: () => window.open("https://wa.me/2348165490072", "_blank"),
+    action: () => window.open("https://wa.me/+2348165490072", "_blank"),
   },
   {
     icon: MapPin,

@@ -23,16 +23,6 @@ export const metadata: Metadata = {
     title: "Frequently Asked Questions - Property Kraft Africa",
     description:
       "Get answers to common questions about Property Kraft Africa's property and facility management services. Learn about our processes, pricing, and how we can help manage your properties.",
-    type: "website",
-    images: [
-      {
-        url: `${BASE_URL}/og-faq.jpg`,
-        width: 1200,
-        height: 630,
-        alt: "Q&A",
-        type: "image/jpg",
-      },
-    ],
     url: `${BASE_URL}/faq`,
   },
   ...createCanonicalMetadata("faq"),

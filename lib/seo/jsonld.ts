@@ -10,13 +10,13 @@ export const jsonLd: WithContext<Organization> = {
   logo: `${BASE_URL}/logo-icon.png`,
   description:
     "Property Kraft delivers trusted, end-to-end property and facility management for residential and commercial properties. Our tailored solutions maximize value, ensure seamless service, and provide full operational transparency. Experience Africa's benchmark for excellence in property management.",
-  image: `${BASE_URL}/og-image.png`,
+  image: `${BASE_URL}/opengraph-image.jpg`,
   address: {
     "@type": "PostalAddress",
     streetAddress: "17, Ayinde Akinmade Street, Lekki Phase 1",
     addressLocality: "Lekki",
     addressRegion: "Lagos State",
-    postalCode: "105102",
+    postalCode: "100001",
     addressCountry: "NG",
   },
   telephone: "+234 816 549 0072",
