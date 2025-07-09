@@ -10,9 +10,9 @@ export const metadata: Metadata = {
   description:
     "Review Property Kraft's legal, privacy, and data protection policies. Learn how we safeguard your information and ensure compliance in all our property management operations.",
   openGraph: {
-    title: "Frequently Asked Questions - Property Kraft Africa",
+    title: "Legal & Privacy Information - Property Kraft Africa",
     description:
-      "Get answers to common questions about Property Kraft Africa's property and facility management services.",
+      "Review Property Kraft's legal, privacy, and data protection policies. Learn how we safeguard your information and ensure compliance in all our property management operations.",
 
     url: `${BASE_URL}/legal`,
   },

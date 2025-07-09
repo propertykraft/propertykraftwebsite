@@ -9,9 +9,9 @@ export const metadata: Metadata = {
   description:
     "Reach out to Property Kraft for inquiries, support, or partnership opportunities. Our team is ready to assist you with all your property and facility management needs.",
   openGraph: {
-    title: "Frequently Asked Questions - Property Kraft Africa",
+    title: "Get in Touch - Property Kraft Africa",
     description:
-      "Get answers to common questions about Property Kraft Africa's property and facility management services.",
+      "Reach out to Property Kraft for inquiries, support, or partnership opportunities. Our team is ready to assist you with all your property and facility management needs.",
 
     url: `${BASE_URL}/contact`,
   },

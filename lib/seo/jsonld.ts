@@ -94,5 +94,9 @@ export const jsonLd: WithContext<Organization> = {
     "property management Lekki",
     "facility management Victoria Island",
     "residential property management services Lagos",
+    "Real estate property management",
+    "property management in Nigeria",
+    "property management",
+    "property management service",
   ],
 };

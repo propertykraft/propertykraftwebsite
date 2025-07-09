@@ -17,9 +17,9 @@ export const metadata: Metadata = {
   description:
     "Discover Property Kraft's mission, vision, and the dedicated team behind our success. Learn how we deliver trusted property and facility management solutions for residential and commercial clients across Africa.",
   openGraph: {
-    title: "Frequently Asked Questions - Property Kraft Africa",
+    title: "Our Mission, Vision & Team - Property Kraft Africa",
     description:
-      "Get answers to common questions about Property Kraft Africa's property and facility management services.",
+      "Discover Property Kraft's mission, vision, and the dedicated team behind our success. Learn how we deliver trusted property and facility management solutions for residential and commercial clients across Africa.",
     url: `${BASE_URL}/about`,
   },
   ...createCanonicalMetadata("about"),

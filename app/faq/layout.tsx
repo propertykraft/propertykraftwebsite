@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Frequently Asked Questions - Property Kraft Africa",
     description:
-      "Get answers to common questions about Property Kraft Africa's property and facility management services.",
+      "Get answers to common questions about Property Kraft Africa's property and facility management services. Learn about our processes, pricing, and how we can help manage your properties.",
     type: "website",
     images: [
       {

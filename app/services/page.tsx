@@ -9,9 +9,9 @@ export const metadata: Metadata = {
   description:
     "Explore Property Kraft's comprehensive range of property and facility management services, including cleaning, security, maintenance, landscaping, and more for residential and commercial properties.",
   openGraph: {
-    title: "Frequently Asked Questions - Property Kraft Africa",
+    title: "Our Services - Property Kraft Africa",
     description:
-      "Get answers to common questions about Property Kraft Africa's property and facility management services.",
+      "Explore Property Kraft's comprehensive range of property and facility management services, including cleaning, security, maintenance, landscaping, and more for residential and commercial properties.",
 
     url: `${BASE_URL}/services`,
   },
