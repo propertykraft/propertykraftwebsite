@@ -103,12 +103,12 @@ export function Hero() {
           {/* Right Content - Floating Cards */}
           <div className="relative h-96 lg:h-[500px]">
             {/* Central Hub */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl flex items-center justify-center shadow-2xl animate-pulse-gentle">
+            <div className="absolute top-1/2 left-2/3 sm:left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl flex items-center justify-center shadow-2xl animate-pulse-gentle">
               <Building className="w-12 h-12 text-white" />
             </div>
 
             {/* Floating Cards */}
-            <FloatingCard delay={0} className="top-8 right-8">
+            <FloatingCard delay={0} className="top-8 right-8 hidden sm:block">
               <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-orange-100 hover:shadow-2xl transition-all duration-300 hover:scale-105">
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center">
@@ -124,7 +124,10 @@ export function Hero() {
               </div>
             </FloatingCard>
 
-            <FloatingCard delay={1} className="bottom-20 right-4">
+            <FloatingCard
+              delay={1}
+              className="bottom-20 right-4 hidden sm:block"
+            >
               <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-orange-100 hover:shadow-2xl transition-all duration-300 hover:scale-105">
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center">
