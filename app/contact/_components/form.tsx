@@ -24,7 +24,7 @@ export const ContactForm = () => {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({
       ...formData,
@@ -205,9 +205,9 @@ export const ContactForm = () => {
               </div>
               <div className="space-y-3">
                 <div className="font-semibold text-gray-900">
-                  Facility Manager: Miracle Ajima
+                  Property Kraft support
                 </div>
-                <div className="text-gray-600">Phone: +234 816 549 0072</div>
+                <div className="text-gray-600">Phone: +234 803 632 2847</div>
                 <div className="text-gray-600">
                   For urgent matters requiring immediate attention
                 </div>
