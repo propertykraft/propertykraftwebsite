@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function LegalPage() {
   return (
     <Suspense fallback="Please wait...">
-      <main className="min-h-screen bg-gray-50">
+      <main className="min-h-screen bg-white">
         <Hero />
         <MainComponent />
       </main>

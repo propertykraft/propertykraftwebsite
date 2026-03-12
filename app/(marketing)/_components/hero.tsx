@@ -1,182 +1,347 @@
-"use client";
-
-import React, { useEffect, useState } from "react";
-import {
-  ArrowRight,
-  TrendingUp,
-  Users,
-  Building,
-  Phone,
-  Handshake,
-} from "lucide-react";
 import Link from "next/link";
-
-import { Button } from "@/components/ui/button";
-
-const FloatingCard = ({
-  children,
-  delay = 0,
-  className = "",
-}: {
-  children: React.ReactNode;
-  delay?: number;
-  className?: string;
-}) => {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  return (
-    <div
-      className={`absolute animate-float ${className}`}
-      style={{
-        animationDelay: `${delay}s`,
-        opacity: mounted ? 1 : 0,
-        transition: "opacity 0.5s ease-in-out",
-      }}
-    >
-      {children}
-    </div>
-  );
-};
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-orange-50 via-white to-orange-100 overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-orange-200/30 rounded-full blur-3xl animate-pulse"></div>
+    <>
+      {/* Dark hero area */}
+      <section className="relative w-full bg-navy overflow-hidden">
+        {/* Atmospheric gradient overlay */}
         <div
-          className="absolute bottom-20 right-10 w-96 h-96 bg-orange-300/20 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: "2s" }}
-        ></div>
+          className="absolute inset-0 pointer-events-none z-[1]"
+          style={{
+            background:
+              "radial-gradient(ellipse 1200px 1100px at 30% 15%, rgba(255, 255, 255, 0.07) 0%, rgba(15, 23, 42, 0) 70%)",
+          }}
+        />
+
+        <div className="relative z-[2]">
+          <HeroBanner />
+
+          {/* Scrolling text ticker with partner section spacing */}
+          <div className="flex flex-col items-center w-full">
+            <div className="content-stretch flex flex-col items-center pt-[80px] md:pt-[120px] px-[16px] md:px-[32px] pb-[32px] w-full">
+              <ScrollingText />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Gradient transition to white — outside the dark wrapper so it fades into white */}
+      <div
+        className="w-full h-[200px] md:h-[280px]"
+        style={{
+          background:
+            "linear-gradient(to bottom, #0F172A 0%, rgba(15, 23, 42, 0.95) 20%, rgba(15, 23, 42, 0.8) 35%, rgba(15, 23, 42, 0.5) 50%, rgba(15, 23, 42, 0.25) 65%, rgba(15, 23, 42, 0.1) 80%, rgba(15, 23, 42, 0.03) 92%, rgba(255, 255, 255, 0) 100%)",
+        }}
+      />
+    </>
+  );
+}
+
+function HeroBanner() {
+  return (
+    <div className="relative shrink-0 w-full" data-name="Hero banner/04">
+      <div className="flex flex-col items-center overflow-clip rounded-[inherit] size-full">
+        <div className="content-stretch flex flex-col items-center py-[24px] md:pb-[80px] md:pt-[112px] px-[16px] md:px-[32px] relative w-full">
+          <Container2 />
+        </div>
       </div>
+    </div>
+  );
+}
 
-      <div className="relative container mx-auto px-4 pt-24 pb-12 min-h-screen flex items-center">
-        <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
-          {/* Left Content */}
-          <div className="space-y-8 animate-fade-in-up">
-            <div className="space-y-4">
-              <div className="inline-block px-4 py-2 bg-orange-100 text-orange-700 rounded-full text-sm font-medium animate-bounce-subtle">
-                ✨ Your Trusted Property Partner
-              </div>
-              <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-                <span className="text-gray-900">Your Trusted Partner in</span>
-                <br />
-                <span className="text-orange-500 animate-gradient-text">
-                  Property Management
-                </span>
-              </h1>
-              <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
-                Managing your property with care, professionalism, and
-                transparency. Experience guaranteed rent and peace of mind.
-              </p>
-            </div>
+function Container2() {
+  return (
+    <div
+      className="content-center flex flex-col md:flex-row flex-wrap gap-6 md:gap-[40px] items-center max-w-[1200px] relative shrink-0 w-full"
+      data-name="Container"
+    >
+      <ContentWrapper />
+      <ImageWrapper />
+    </div>
+  );
+}
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/services">
-                <Button
-                  size="lg"
-                  className="bg-orange-500 hover:bg-orange-600 text-white group w-full"
-                  aria-label="Explore our services"
-                >
-                  Explore Our Services
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
-              <Link href="/contact">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="group bg-transparent w-full"
-                  aria-label="Contact us"
-                >
-                  <Phone className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />
-                  Contact Us
-                </Button>
-              </Link>
-            </div>
-          </div>
-
-          {/* Right Content - Floating Cards */}
-          <div className="relative h-96 lg:h-[500px]">
-            {/* Central Hub */}
-            <div className="absolute top-1/2 left-2/3 sm:left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl flex items-center justify-center shadow-2xl animate-pulse-gentle">
-              <Building className="w-12 h-12 text-white" />
-            </div>
-
-            {/* Floating Cards */}
-            <FloatingCard delay={0} className="top-8 right-8 hidden sm:block">
-              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-orange-100 hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center">
-                    <TrendingUp className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-gray-900">98%</div>
-                    <div className="text-sm text-gray-600">
-                      Client Satisfaction
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </FloatingCard>
-
-            <FloatingCard
-              delay={1}
-              className="bottom-20 right-4 hidden sm:block"
-            >
-              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-orange-100 hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center">
-                    <Users className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-gray-900">500+</div>
-                    <div className="text-sm text-gray-600">
-                      Properties Managed
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </FloatingCard>
-
-            <FloatingCard delay={2} className="top-16 left-4">
-              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-orange-100 hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center">
-                    <Handshake className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-gray-900">
-                      Trusted Partner
-                    </div>
-                    <div className="text-sm text-gray-600">Since 2020</div>
-                  </div>
-                </div>
-              </div>
-            </FloatingCard>
-
-            <FloatingCard delay={0.5} className="bottom-8 left-8">
-              <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl p-4 shadow-xl text-white hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                <div className="text-center">
-                  <div className="text-lg font-bold">Guaranteed Rent</div>
-                  <div className="text-sm opacity-90">100% Secure</div>
-                </div>
-              </div>
-            </FloatingCard>
-          </div>
+function ContentWrapper() {
+  return (
+    <div className="flex flex-col gap-9 items-start flex-1 md:min-w-[360px]">
+      <div className="flex flex-col gap-10 items-start w-full">
+        <p className="font-medium leading-[1.08] text-white text-[32px] md:text-[48px] whitespace-pre-wrap">
+          Complete Property and Facility Management You Can Rely On.
+        </p>
+        <div className="w-full max-w-[580px]">
+          <p className="font-normal leading-[1.6] opacity-80 text-white text-[16px] md:text-[20px] whitespace-pre-wrap">
+            We manage your properties, tenants, facilities, and daily operations
+            with structured systems designed for clarity, accountability, and
+            long-term stability.
+          </p>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-orange-300 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-orange-500 rounded-full mt-2 animate-pulse"></div>
+      {/* CTA Button */}
+      <a
+        href="https://wa.me/2348165490072?text=Hello"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="relative rounded-xl md:rounded-2xl bg-transparent hover:bg-pk-orange transition-all duration-200 cursor-pointer group"
+      >
+        <div className="flex items-center justify-center px-4 md:px-6 py-3 md:py-4">
+          <span className="text-pk-orange group-hover:text-white font-bold text-[14px] md:text-[16px] transition-colors duration-200">
+            Chat with Us
+          </span>
+        </div>
+        <div
+          aria-hidden="true"
+          className="absolute border border-pk-orange border-solid inset-0 pointer-events-none rounded-xl md:rounded-2xl"
+        />
+      </a>
+    </div>
+  );
+}
+
+function ScrollingText() {
+  const phrases = [
+    "PROPERTY MANAGEMENT",
+    "FACILITY MANAGEMENT",
+    "RENT ADMINISTRATION",
+    "TENANT MANAGEMENT",
+    "MAINTENANCE COORDINATION",
+    "ESTATE OPERATIONS",
+    "PROPERTY INSPECTIONS",
+    "SECURE RENT COLLECTION",
+  ];
+
+  return (
+    <div className="content-stretch flex gap-[48px] items-center max-w-[1200px] overflow-hidden py-[16px] md:py-[20px] w-full">
+      <div className="flex gap-[48px] md:gap-[64px] items-center animate-scroll whitespace-nowrap">
+        {[0, 1].map((i) => (
+          <div key={i} className="flex gap-[48px] md:gap-[64px] items-center">
+            {phrases.map((phrase, index) => (
+              <span
+                key={index}
+                className="text-[12px] md:text-[14px] font-medium leading-[1.5] tracking-[1.5px] text-white opacity-85"
+              >
+                {phrase}
+              </span>
+            ))}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function ImageWrapper() {
+  return (
+    <div
+      className="hidden md:flex content-stretch items-start justify-center md:justify-end w-full md:w-[405px] relative shrink-0 scale-90 md:scale-100"
+      data-name="Image wrapper"
+    >
+      <ImgLibHeroIllu />
+    </div>
+  );
+}
+
+function Group3() {
+  return (
+    <div
+      className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0"
+      data-name="Group"
+    >
+      <div
+        className="[grid-column:1] ml-[136px] mt-0 relative [grid-row:1] size-[120px]"
+        data-name="Image item"
+      >
+        <div className="absolute flex inset-[-2.63%_-4.99%_-6.28%_-4.49%] items-center justify-center">
+          <div className="flex-none h-[120.285px] rotate-[-5.23deg] skew-x-[0.3deg] w-[120.287px]">
+            <div
+              className="rounded-[32px] size-full bg-[#ffffff] animate-subtle-rotate"
+              data-name="Thumbnail"
+            />
+          </div>
+        </div>
+        <div
+          className="absolute inset-[0_0.09%_0_-0.09%] overflow-clip rounded-[32px]"
+          data-name="Img lib/Image cover/Business"
+        >
+          <img
+            alt=""
+            className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
+            src="/hero-gallery-1.jpg"
+          />
         </div>
       </div>
-    </section>
+      <div
+        className="[grid-column:1] ml-[272px] mt-0 relative [grid-row:1] size-[120px]"
+        data-name="Image item"
+      >
+        <div className="absolute flex inset-[-2.63%_-4.99%_-6.28%_-4.49%] items-center justify-center">
+          <div className="flex-none h-[120.285px] rotate-[-5.23deg] skew-x-[0.3deg] w-[120.287px]">
+            <div
+              className="bg-white rounded-[32px] size-full animate-subtle-rotate"
+              data-name="Thumbnail"
+            />
+          </div>
+        </div>
+        <div
+          className="absolute inset-[0_0.09%_0_-0.09%] overflow-clip rounded-[32px]"
+          data-name="Img lib/Image cover/Business"
+        >
+          <img
+            alt=""
+            className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
+            src="/hero-gallery-2.jpg"
+          />
+        </div>
+      </div>
+      <div
+        className="[grid-column:1] ml-[136px] mt-[136px] relative [grid-row:1] size-[120px]"
+        data-name="Image item"
+      >
+        <div className="absolute flex inset-[-2.63%_-4.99%_-6.28%_-4.49%] items-center justify-center">
+          <div className="flex-none h-[120.285px] rotate-[-5.23deg] skew-x-[0.3deg] w-[120.287px]">
+            <div
+              className="bg-white rounded-[32px] size-full animate-subtle-rotate"
+              data-name="Thumbnail"
+            />
+          </div>
+        </div>
+        <div
+          className="absolute inset-[0_0.09%_0_-0.09%] overflow-clip rounded-[32px]"
+          data-name="Img lib/Image cover/Business"
+        >
+          <img
+            alt=""
+            className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
+            src="/hero-gallery-3.jpg"
+          />
+        </div>
+      </div>
+      <div
+        className="[grid-column:1] ml-0 mt-[136px] relative [grid-row:1] size-[120px]"
+        data-name="Image item"
+      >
+        <div className="absolute flex inset-[15.83%_13.57%_12.18%_14.07%] items-center justify-center">
+          <div className="flex-none size-[86.38px] skew-x-[0.3deg]">
+            <div
+              className="bg-white rounded-[24px] size-full"
+              data-name="Thumbnail"
+            />
+          </div>
+        </div>
+        <div className="absolute flex inset-[4.17%_2.21%_62.39%_64.17%] items-center justify-center">
+          <div className="flex-none h-[34.441px] rotate-[-10.55deg] skew-x-[0.3deg] w-[34.442px]">
+            <div
+              className="bg-[#ff5000] rounded-[12px] size-full"
+              data-name="Thumbnail"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="[grid-column:1] ml-[272px] mt-[136px] relative [grid-row:1] size-[120px]"
+        data-name="Image item"
+      >
+        <div className="absolute flex inset-[-2.63%_-4.99%_-6.28%_-4.49%] items-center justify-center">
+          <div className="flex-none h-[120.285px] rotate-[-5.23deg] skew-x-[0.3deg] w-[120.287px]">
+            <div
+              className="bg-white rounded-[32px] size-full animate-subtle-rotate"
+              data-name="Thumbnail"
+            />
+          </div>
+        </div>
+        <div
+          className="absolute inset-[0_0.09%_0_-0.09%] overflow-clip rounded-[32px]"
+          data-name="Img lib/Image cover/Business"
+        >
+          <img
+            alt=""
+            className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
+            src="/hero-gallery-4.jpg"
+          />
+        </div>
+      </div>
+      <div
+        className="[grid-column:1] ml-[136px] mt-[272px] relative [grid-row:1] size-[120px]"
+        data-name="Image item"
+      >
+        <div className="absolute flex inset-[-2.63%_-4.99%_-6.28%_-4.49%] items-center justify-center">
+          <div className="flex-none h-[120.285px] rotate-[-5.23deg] skew-x-[0.3deg] w-[120.287px]">
+            <div
+              className="bg-white rounded-[32px] size-full animate-subtle-rotate"
+              data-name="Thumbnail"
+            />
+          </div>
+        </div>
+        <div
+          className="absolute inset-[0_0.09%_0_-0.09%] overflow-clip rounded-[32px]"
+          data-name="Img lib/Image cover/Business"
+        >
+          <img
+            alt=""
+            className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
+            src="/hero-gallery-6.jpg"
+          />
+        </div>
+      </div>
+      <div
+        className="[grid-column:1] ml-0 mt-[272px] relative [grid-row:1] size-[120px]"
+        data-name="Image item"
+      >
+        <div className="absolute flex inset-[-2.63%_-4.99%_-6.28%_-4.49%] items-center justify-center">
+          <div className="flex-none h-[120.285px] rotate-[-5.23deg] skew-x-[0.3deg] w-[120.287px]">
+            <div
+              className="bg-white rounded-[32px] size-full animate-subtle-rotate"
+              data-name="Thumbnail"
+            />
+          </div>
+        </div>
+        <div
+          className="absolute inset-[0_0.09%_0_-0.09%] overflow-clip rounded-[32px]"
+          data-name="Img lib/Image cover/Business"
+        >
+          <img
+            alt=""
+            className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
+            src="/hero-gallery-5.jpg"
+          />
+        </div>
+      </div>
+      <div
+        className="[grid-column:1] ml-[272px] mt-[272px] relative [grid-row:1] size-[120px]"
+        data-name="Image item"
+      >
+        <div className="absolute flex inset-[-2.63%_-4.99%_-6.28%_-4.49%] items-center justify-center">
+          <div className="flex-none h-[120.285px] rotate-[-5.23deg] skew-x-[0.3deg] w-[120.287px]">
+            <div
+              className="bg-white rounded-[32px] size-full animate-subtle-rotate"
+              data-name="Thumbnail"
+            />
+          </div>
+        </div>
+        <div
+          className="absolute inset-[0_0.09%_0_-0.09%] overflow-clip rounded-[32px]"
+          data-name="Img lib/Image cover/Business"
+        >
+          <img
+            alt=""
+            className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
+            src="/hero-gallery-7.jpg"
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ImgLibHeroIllu() {
+  return (
+    <div
+      className="content-stretch flex items-end justify-end w-full md:w-[405px] md:min-w-[320px] relative shrink-0"
+      data-name="Img lib/Hero illu/02"
+      style={{ filter: "drop-shadow(0 8px 24px rgba(0, 0, 0, 0.2))" }}
+    >
+      <Group3 />
+    </div>
   );
 }

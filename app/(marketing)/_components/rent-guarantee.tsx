@@ -1,71 +1,108 @@
-import { features } from "./data";
+import Link from "next/link";
+import Image from "next/image";
 
-export function RentGuarantee() {
+const benefits = [
+  "Tenant onboarding, KYC verification, and offer letters",
+  "Rent reminders, payment tracking, and financial records",
+  "Tenancy renewals and end-of-tenancy coordination",
+  "Maintenance requests and vendor communication",
+];
+
+export function LiztPreview() {
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center space-y-4 mb-16">
-          <h2 className="text-4xl font-bold">
-            <span className="text-orange-500">Peace of Mind</span>
-            <br />
-            <span className="text-gray-900">with Annual Rent Guarantees</span>
-          </h2>
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <div className="space-y-6">
-              <p className="text-lg text-gray-700 leading-relaxed">
-                At Property Kraft, we offer landlords annual rent guarantees on
-                the properties we manage — providing peace of mind, predictable
-                income, and total protection against tenant defaults.
-              </p>
-
-              <p className="text-lg text-gray-700 leading-relaxed">
-                We guarantee the tenants we place in your property. If they
-                default or delay payment, you still receive your full annual
-                rent—promptly and in full. We also handle any required
-                evictions, taking on the legal and operational burden
-                completely.
-              </p>
-
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Our guarantee is backed by a trusted financial institution,
-                giving you verified, bank-supported assurance that your income
-                is secure.
+    <section className="w-full" style={{ backgroundColor: "#F9F7F4" }}>
+      <div className="max-w-[1200px] mx-auto px-4 md:px-8 py-10 md:py-20">
+        <div className="flex flex-col md:flex-row gap-10 items-start">
+          {/* Left: Text Content */}
+          <div className="flex-1 min-w-0 md:min-w-[340px]">
+            <div className="flex flex-col gap-6 items-start w-full">
+              <h2 className="font-semibold leading-[1.16] text-[#141513] text-[32px] md:text-[39px]">
+                Meet Lizt — A Smarter Way to Manage Properties.
+              </h2>
+              <p className="font-normal leading-[1.6] opacity-80 text-[#3c403a] text-[16px] max-w-[90%]">
+                Lizt is one of our products designed to make managing tenants and
+                properties simple. It works through WhatsApp, so you can oversee
+                your property from your phone — just like sending a message.
               </p>
             </div>
 
-            <div className="bg-orange-50 rounded-2xl p-6 border-l-4 border-orange-500">
-              <p className="text-lg font-semibold text-gray-900 italic">
-                "All you need to do is sit back and receive your rent. We take
-                care of the rest."
-              </p>
+            <div className="h-8" />
+
+            {/* Benefit list */}
+            <div className="flex flex-col gap-2 items-start w-full">
+              {benefits.map((benefit) => (
+                <div
+                  key={benefit}
+                  className="flex gap-2.5 items-start w-full"
+                >
+                  <div className="flex items-center pt-2.5 shrink-0">
+                    <div className="w-1.5 h-1.5 rounded-full bg-pk-orange" />
+                  </div>
+                  <p className="flex-1 font-normal leading-[1.6] text-[#282b27] text-[14px]">
+                    {benefit}
+                  </p>
+                </div>
+              ))}
             </div>
+
+            <div className="h-9" />
+
+            <p className="font-normal leading-[1.6] opacity-80 text-[#3c403a] text-[16px] max-w-[90%]">
+              There&apos;s also a simple dashboard that keeps all your records
+              organized and easy to understand — without complicated software.
+            </p>
+
+            <div className="h-8" />
+
+            <Link
+              href="/services/lizt"
+              className="inline-flex items-center justify-center px-6 py-3 bg-pk-orange hover:bg-pk-orange-hover transition-colors rounded-[10px] text-white font-bold text-[16px]"
+            >
+              Learn More
+            </Link>
           </div>
 
-          <div className="space-y-4">
-            {features.map((feature, index) => (
-              <div
-                key={feature.title}
-                className="bg-white rounded-xl p-4 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:scale-105"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <feature.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">
-                      {feature.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm">
-                      {feature.description}
-                    </p>
+          {/* Right: Image area */}
+          <div className="flex-1 min-w-0 md:min-w-[400px] flex flex-col items-center md:items-end justify-center">
+            <div className="relative rounded-[32px] p-5 border border-white">
+              <div className="relative h-[280px] md:h-[338px] w-full md:w-[443px] overflow-hidden rounded-[20px]">
+                {/* placeholder: lizt-preview.jpg */}
+                <Image
+                  src="/lizt-preview.jpg"
+                  alt="Happy landlord using phone"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              {/* WhatsApp message bubble overlay */}
+              <div className="absolute bottom-0 left-0 bg-white rounded-[26px] p-3.5 border border-white shadow-lg">
+                <div className="w-[310px]">
+                  <div className="flex items-start gap-1.5">
+                    <div className="w-7 h-7 shrink-0 relative">
+                      {/* placeholder: lizt-icon.png */}
+                      <Image
+                        src="/lizt-icon.png"
+                        alt="Lizt logo"
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <div className="bg-[#DCF8C6] rounded-lg px-2.5 py-2 shadow-sm">
+                        <p className="font-normal leading-[1.5] text-black text-[14px]">
+                          Hi Mr. Ade 👋
+                          <br />
+                          This is a reminder that your rent is due on June 30.
+                          <br />
+                          You can complete payment using the link sent to you.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
-export * from "./hero";
-export * from "./achievements";
-export * from "./vision";
-export * from "./founders-message";
-export * from "./bod";
-export * from "./founder";
-export * from "./teams";
+export { Hero } from "./hero";
+export { WhyWeExist } from "./achievements";
+export { WhoWeAre } from "./vision";
+export { PhilosophyCta } from "./founders-message";
+export { AdvisoryBoard } from "./bod";
+export { Leadership } from "./founder";
+export { CoreTeam } from "./teams";

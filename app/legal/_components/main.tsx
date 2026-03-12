@@ -1,15 +1,12 @@
 "use client";
-import { Shield, FileText, Mail, Phone, MapPin } from "lucide-react";
-import { useSearchParams, useRouter } from "next/navigation";
 
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useSearchParams, useRouter } from "next/navigation";
+import Link from "next/link";
 
 export const MainComponent = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const activeTab = searchParams.get("tab");
+  const activeTab = searchParams.get("tab") === "terms" ? "terms" : "privacy";
 
   const handleTabChange = (tab: "privacy" | "terms") => {
     const params = new URLSearchParams(Array.from(searchParams.entries()));
@@ -18,319 +15,294 @@ export const MainComponent = () => {
   };
 
   return (
-    <section className="py-16">
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <Tabs
-            value={activeTab === "terms" ? "terms" : "privacy"}
-            className="w-full"
+    <section className="py-16 md:py-24 bg-white">
+      <div className="max-w-[900px] mx-auto px-5 md:px-10">
+        {/* Tab Switcher */}
+        <div className="flex gap-2 mb-12 border-b border-pk-border">
+          <TabButton
+            active={activeTab === "privacy"}
+            onClick={() => handleTabChange("privacy")}
           >
-            <TabsList className="grid w-full grid-cols-2 mb-8">
-              <TabsTrigger
-                value="privacy"
-                className="flex items-center gap-2"
-                onClick={() => handleTabChange("privacy")}
-              >
-                <Shield className="w-4 h-4" />
-                Privacy Policy
-              </TabsTrigger>
-              <TabsTrigger
-                value="terms"
-                className="flex items-center gap-2"
-                onClick={() => handleTabChange("terms")}
-              >
-                <FileText className="w-4 h-4" />
-                Terms of Service
-              </TabsTrigger>
-            </TabsList>
+            Privacy Policy
+          </TabButton>
+          <TabButton
+            active={activeTab === "terms"}
+            onClick={() => handleTabChange("terms")}
+          >
+            Terms of Service
+          </TabButton>
+        </div>
 
-            <TabsContent value="privacy">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-2xl">
-                    <Shield className="w-6 h-6 text-blue-600" />
-                    Privacy Policy
-                  </CardTitle>
-                  <p className="text-gray-600">Last updated: January 1, 2025</p>
-                </CardHeader>
-                <CardContent className="prose max-w-none">
-                  <div className="space-y-8">
-                    <section>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                        Information We Collect
-                      </h3>
-                      <div className="bg-blue-50 p-6 rounded-lg">
-                        <h4 className="font-semibold mb-3">
-                          Personal Information
-                        </h4>
-                        <ul className="space-y-2 text-gray-700">
-                          <li>• Name, email address, and phone number</li>
-                          <li>• Property addresses and details</li>
-                          <li>• Financial information for rent collection</li>
-                          <li>• Communication preferences</li>
-                        </ul>
-                      </div>
-                    </section>
+        {activeTab === "privacy" ? <PrivacyContent /> : <TermsContent />}
 
-                    <section>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                        How We Use Your Information
-                      </h3>
-                      <div className="grid md:grid-cols-2 gap-6">
-                        <div className="bg-green-50 p-6 rounded-lg">
-                          <h4 className="font-semibold mb-3">
-                            Service Delivery
-                          </h4>
-                          <ul className="space-y-2 text-gray-700">
-                            <li>• Property management services</li>
-                            <li>• Tenant screening and placement</li>
-                            <li>• Maintenance coordination</li>
-                            <li>• Financial reporting</li>
-                          </ul>
-                        </div>
-                        <div className="bg-orange-50 p-6 rounded-lg">
-                          <h4 className="font-semibold mb-3">Communication</h4>
-                          <ul className="space-y-2 text-gray-700">
-                            <li>• Service updates and notifications</li>
-                            <li>• Emergency communications</li>
-                            <li>• Marketing communications (opt-in)</li>
-                            <li>• Customer support</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </section>
-
-                    <section>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                        Data Protection
-                      </h3>
-                      <div className="bg-gray-50 p-6 rounded-lg">
-                        <p className="text-gray-700 mb-4">
-                          We implement industry-standard security measures to
-                          protect your personal information:
-                        </p>
-                        <ul className="space-y-2 text-gray-700">
-                          <li>• SSL encryption for data transmission</li>
-                          <li>• Secure servers with regular backups</li>
-                          <li>• Limited access to authorized personnel only</li>
-                          <li>• Regular security audits and updates</li>
-                        </ul>
-                      </div>
-                    </section>
-
-                    <section>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                        Your Rights
-                      </h3>
-                      <div className="grid md:grid-cols-3 gap-4">
-                        <div className="bg-blue-50 p-4 rounded-lg text-center">
-                          <h4 className="font-semibold mb-2">Access</h4>
-                          <p className="text-sm text-gray-600">
-                            Request access to your personal data
-                          </p>
-                        </div>
-                        <div className="bg-green-50 p-4 rounded-lg text-center">
-                          <h4 className="font-semibold mb-2">Correction</h4>
-                          <p className="text-sm text-gray-600">
-                            Update or correct your information
-                          </p>
-                        </div>
-                        <div className="bg-orange-50 p-4 rounded-lg text-center">
-                          <h4 className="font-semibold mb-2">Deletion</h4>
-                          <p className="text-sm text-gray-600">
-                            Request deletion of your data
-                          </p>
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </CardContent>
-              </Card>
-            </TabsContent>
-
-            <TabsContent value="terms">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-2xl">
-                    <FileText className="w-6 h-6 text-green-600" />
-                    Terms of Service
-                  </CardTitle>
-                  <p className="text-gray-600">Last updated: January 1, 2025</p>
-                </CardHeader>
-                <CardContent className="prose max-w-none">
-                  <div className="space-y-8">
-                    <section>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                        Service Description
-                      </h3>
-                      <div className="bg-blue-50 p-6 rounded-lg">
-                        <p className="text-gray-700 mb-4">
-                          Property Kraft provides comprehensive property
-                          management services including:
-                        </p>
-                        <div className="grid md:grid-cols-2 gap-4">
-                          <ul className="space-y-2 text-gray-700">
-                            <li>• Tenant screening and placement</li>
-                            <li>• Rent collection and financial management</li>
-                            <li>• Property maintenance and repairs</li>
-                            <li>• Legal compliance and documentation</li>
-                          </ul>
-                          <ul className="space-y-2 text-gray-700">
-                            <li>• 24/7 emergency response</li>
-                            <li>• Regular property inspections</li>
-                            <li>• Marketing and advertising</li>
-                            <li>• Detailed financial reporting</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </section>
-
-                    <section>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                        Client Responsibilities
-                      </h3>
-                      <div className="bg-green-50 p-6 rounded-lg">
-                        <ul className="space-y-3 text-gray-700">
-                          <li>
-                            • Provide accurate property information and
-                            documentation
-                          </li>
-                          <li>
-                            • Maintain property insurance as required by law
-                          </li>
-                          <li>
-                            • Respond promptly to requests for information or
-                            decisions
-                          </li>
-                          <li>• Pay management fees and expenses as agreed</li>
-                          <li>
-                            • Comply with all applicable laws and regulations
-                          </li>
-                        </ul>
-                      </div>
-                    </section>
-
-                    <section>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                        Fees and Payment
-                      </h3>
-                      <div className="grid md:grid-cols-2 gap-6">
-                        <div className="bg-orange-50 p-6 rounded-lg">
-                          <h4 className="font-semibold mb-3">
-                            Management Fees
-                          </h4>
-                          <ul className="space-y-2 text-gray-700">
-                            <li>
-                              • Monthly management fee: 8-12% of rent collected
-                            </li>
-                            <li>• Tenant placement fee: One month's rent</li>
-                            <li>• Lease renewal fee: $200 per renewal</li>
-                          </ul>
-                        </div>
-                        <div className="bg-purple-50 p-6 rounded-lg">
-                          <h4 className="font-semibold mb-3">
-                            Additional Services
-                          </h4>
-                          <ul className="space-y-2 text-gray-700">
-                            <li>• Property inspections: $150 per inspection</li>
-                            <li>• Eviction processing: $500 + legal costs</li>
-                            <li>• Maintenance coordination: 10% markup</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </section>
-
-                    <section>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                        Limitation of Liability
-                      </h3>
-                      <div className="bg-gray-50 p-6 rounded-lg">
-                        <p className="text-gray-700 mb-4">
-                          Property Kraft's liability is limited to the
-                          management fees paid in the preceding 12 months. We
-                          are not liable for:
-                        </p>
-                        <ul className="space-y-2 text-gray-700">
-                          <li>
-                            • Property damage beyond our reasonable control
-                          </li>
-                          <li>• Tenant actions or defaults</li>
-                          <li>• Market conditions affecting rental income</li>
-                          <li>• Force majeure events</li>
-                        </ul>
-                      </div>
-                    </section>
-
-                    <section>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                        Termination
-                      </h3>
-                      <div className="bg-red-50 p-6 rounded-lg">
-                        <p className="text-gray-700 mb-4">
-                          Either party may terminate this agreement with 30 days
-                          written notice. Upon termination:
-                        </p>
-                        <ul className="space-y-2 text-gray-700">
-                          <li>
-                            • All funds will be transferred within 30 days
-                          </li>
-                          <li>• Property records will be provided</li>
-                          <li>• Ongoing leases may be transferred</li>
-                          <li>• Final accounting will be completed</li>
-                        </ul>
-                      </div>
-                    </section>
-                  </div>
-                </CardContent>
-              </Card>
-            </TabsContent>
-          </Tabs>
-
-          {/* Contact Section */}
-          <Card className="mt-12">
-            <CardHeader>
-              <CardTitle className="text-center">
-                Questions About Our Policies?
-              </CardTitle>
-              <p className="text-center text-gray-600">
-                Contact us if you have any questions about our privacy policy or
-                terms of service.
-              </p>
-            </CardHeader>
-            <CardContent>
-              <div className="grid md:grid-cols-3 gap-6 text-center">
-                <div className="flex flex-col items-center space-y-2">
-                  <Mail className="w-8 h-8 text-blue-600" />
-                  <h3 className="font-semibold">Email</h3>
-                  <p className="text-gray-600">legal@propertykraft.africa</p>
-                </div>
-                <div className="flex flex-col items-center space-y-2">
-                  <Phone className="w-8 h-8 text-green-600" />
-                  <h3 className="font-semibold">Phone</h3>
-                  <p className="text-gray-600">+234 816 549 0072</p>
-                </div>
-                <div className="flex flex-col items-center space-y-2">
-                  <MapPin className="w-8 h-8 text-orange-600" />
-                  <h3 className="font-semibold">Address</h3>
-                  <p className="text-gray-600">
-                    17, Ayinde Akinmade Street, Lekki Phase 1,
-                    <br />
-                    Lagos
-                  </p>
-                </div>
-              </div>
-              <div className="text-center mt-8">
-                <Button
-                  size="lg"
-                  className="bg-orange-600 hover:bg-orange-700 text-white"
-                >
-                  Contact Legal Team
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
+        {/* Contact CTA */}
+        <div className="mt-16 bg-navy rounded-xl px-8 py-12 text-center">
+          <h3 className="font-semibold text-white text-[24px] md:text-[28px] mb-4">
+            Questions About Our Policies?
+          </h3>
+          <p className="font-normal text-white/80 text-[16px] mb-6">
+            Contact us if you have any questions about our privacy policy or
+            terms of service.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-block bg-pk-orange hover:bg-pk-orange-hover transition-colors text-white px-7 py-3 rounded-lg font-medium text-[15px]"
+          >
+            Contact Us
+          </Link>
         </div>
       </div>
     </section>
   );
 };
+
+function TabButton({
+  active,
+  onClick,
+  children,
+}: {
+  active: boolean;
+  onClick: () => void;
+  children: React.ReactNode;
+}) {
+  return (
+    <button
+      onClick={onClick}
+      className={`px-5 py-3 text-[15px] font-medium transition-colors border-b-2 -mb-px ${
+        active
+          ? "border-pk-orange text-pk-orange"
+          : "border-transparent text-pk-text-light hover:text-navy"
+      }`}
+    >
+      {children}
+    </button>
+  );
+}
+
+function SectionBlock({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="mb-10">
+      <h3 className="font-semibold text-navy text-[20px] md:text-[22px] mb-4">
+        {title}
+      </h3>
+      {children}
+    </div>
+  );
+}
+
+function BulletList({ items }: { items: string[] }) {
+  return (
+    <ul className="space-y-2">
+      {items.map((item) => (
+        <li
+          key={item}
+          className="font-normal text-pk-text-light text-[15px] leading-[1.7] pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-pk-text-light"
+        >
+          {item}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function PrivacyContent() {
+  return (
+    <div>
+      <p className="font-normal text-pk-text-light text-[14px] mb-8">
+        Last updated: January 1, 2025
+      </p>
+
+      <SectionBlock title="Information We Collect">
+        <p className="font-normal text-pk-text-light text-[15px] leading-[1.7] mb-3">
+          We collect the following personal information:
+        </p>
+        <BulletList
+          items={[
+            "Name, email address, and phone number",
+            "Property addresses and details",
+            "Financial information for rent collection",
+            "Communication preferences",
+          ]}
+        />
+      </SectionBlock>
+
+      <SectionBlock title="How We Use Your Information">
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="border border-pk-border rounded-lg p-5">
+            <h4 className="font-medium text-navy text-[16px] mb-3">
+              Service Delivery
+            </h4>
+            <BulletList
+              items={[
+                "Property management services",
+                "Tenant screening and placement",
+                "Maintenance coordination",
+                "Financial reporting",
+              ]}
+            />
+          </div>
+          <div className="border border-pk-border rounded-lg p-5">
+            <h4 className="font-medium text-navy text-[16px] mb-3">
+              Communication
+            </h4>
+            <BulletList
+              items={[
+                "Service updates and notifications",
+                "Emergency communications",
+                "Marketing communications (opt-in)",
+                "Customer support",
+              ]}
+            />
+          </div>
+        </div>
+      </SectionBlock>
+
+      <SectionBlock title="Data Protection">
+        <p className="font-normal text-pk-text-light text-[15px] leading-[1.7] mb-3">
+          We implement industry-standard security measures to protect your
+          personal information:
+        </p>
+        <BulletList
+          items={[
+            "SSL encryption for data transmission",
+            "Secure servers with regular backups",
+            "Limited access to authorized personnel only",
+            "Regular security audits and updates",
+          ]}
+        />
+      </SectionBlock>
+
+      <SectionBlock title="Your Rights">
+        <div className="grid md:grid-cols-3 gap-4">
+          {["Access", "Correction", "Deletion"].map((right) => (
+            <div
+              key={right}
+              className="border border-pk-border rounded-lg p-4 text-center"
+            >
+              <h4 className="font-medium text-navy text-[16px] mb-1">
+                {right}
+              </h4>
+              <p className="text-pk-text-light text-[14px]">
+                {right === "Access" && "Request access to your personal data"}
+                {right === "Correction" && "Update or correct your information"}
+                {right === "Deletion" && "Request deletion of your data"}
+              </p>
+            </div>
+          ))}
+        </div>
+      </SectionBlock>
+    </div>
+  );
+}
+
+function TermsContent() {
+  return (
+    <div>
+      <p className="font-normal text-pk-text-light text-[14px] mb-8">
+        Last updated: January 1, 2025
+      </p>
+
+      <SectionBlock title="Service Description">
+        <p className="font-normal text-pk-text-light text-[15px] leading-[1.7] mb-3">
+          Property Kraft provides comprehensive property management services
+          including:
+        </p>
+        <div className="grid md:grid-cols-2 gap-4">
+          <BulletList
+            items={[
+              "Tenant screening and placement",
+              "Rent collection and financial management",
+              "Property maintenance and repairs",
+              "Legal compliance and documentation",
+            ]}
+          />
+          <BulletList
+            items={[
+              "24/7 emergency response",
+              "Regular property inspections",
+              "Marketing and advertising",
+              "Detailed financial reporting",
+            ]}
+          />
+        </div>
+      </SectionBlock>
+
+      <SectionBlock title="Client Responsibilities">
+        <BulletList
+          items={[
+            "Provide accurate property information and documentation",
+            "Maintain property insurance as required by law",
+            "Respond promptly to requests for information or decisions",
+            "Pay management fees and expenses as agreed",
+            "Comply with all applicable laws and regulations",
+          ]}
+        />
+      </SectionBlock>
+
+      <SectionBlock title="Fees and Payment">
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="border border-pk-border rounded-lg p-5">
+            <h4 className="font-medium text-navy text-[16px] mb-3">
+              Management Fees
+            </h4>
+            <BulletList
+              items={[
+                "Monthly management fee: 8-12% of rent collected",
+                "Tenant placement fee: One month's rent",
+                "Lease renewal fee: $200 per renewal",
+              ]}
+            />
+          </div>
+          <div className="border border-pk-border rounded-lg p-5">
+            <h4 className="font-medium text-navy text-[16px] mb-3">
+              Additional Services
+            </h4>
+            <BulletList
+              items={[
+                "Property inspections: $150 per inspection",
+                "Eviction processing: $500 + legal costs",
+                "Maintenance coordination: 10% markup",
+              ]}
+            />
+          </div>
+        </div>
+      </SectionBlock>
+
+      <SectionBlock title="Limitation of Liability">
+        <p className="font-normal text-pk-text-light text-[15px] leading-[1.7] mb-3">
+          Property Kraft&apos;s liability is limited to the management fees paid
+          in the preceding 12 months. We are not liable for:
+        </p>
+        <BulletList
+          items={[
+            "Property damage beyond our reasonable control",
+            "Tenant actions or defaults",
+            "Market conditions affecting rental income",
+            "Force majeure events",
+          ]}
+        />
+      </SectionBlock>
+
+      <SectionBlock title="Termination">
+        <p className="font-normal text-pk-text-light text-[15px] leading-[1.7] mb-3">
+          Either party may terminate this agreement with 30 days written notice.
+          Upon termination:
+        </p>
+        <BulletList
+          items={[
+            "All funds will be transferred within 30 days",
+            "Property records will be provided",
+            "Ongoing leases may be transferred",
+            "Final accounting will be completed",
+          ]}
+        />
+      </SectionBlock>
+    </div>
+  );
+}

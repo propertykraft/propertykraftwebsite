@@ -1,42 +1,56 @@
 import Image from "next/image";
+
 import { founder } from "./data";
 
-export const Leadership = () => {
+export function Leadership() {
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 tracking-wide uppercase">
-            Founder
-          </h2>
-        </div>
-        <div className="flex flex-col lg:flex-row items-center bg-gray-50 p-0 gap-10 lg:gap-20">
-          <div className="flex-shrink-0 w-full max-w-xs lg:max-w-sm">
-            <Image
-              src={founder.imgUrl}
-              alt={founder.name}
-              className="object-cover w-full h-auto rounded-none"
-              loading="lazy"
-              width={400}
-              height={400}
-            />
+    <section className="relative w-full bg-white pt-[140px] pb-[80px]">
+      <div className="max-w-[1200px] w-full mx-auto px-5 md:px-10">
+        <div className="grid grid-cols-1 lg:grid-cols-[35%_65%] gap-[60px] lg:gap-[80px]">
+          {/* Left Column */}
+          <div>
+            <p className="font-normal text-navy/50 text-[13px] uppercase tracking-[0.15em] mb-4">
+              Our Team
+            </p>
+            <h2 className="font-serif text-navy text-[42px] md:text-[48px] leading-[1.1] mb-6">
+              Leadership
+            </h2>
+            <p className="font-normal text-navy/70 text-[15px] md:text-[16px] leading-[1.7]">
+              Our leadership brings together expertise across product,
+              operations, compliance, and real estate to build structured systems
+              that scale with clarity and accountability.
+            </p>
           </div>
-          <div className="flex-1 text-left lg:pl-8">
-            <div className="text-sm text-orange-500 tracking-widest mb-2 uppercase">
-              {founder.role}
+
+          {/* Right Column — Founder */}
+          <div>
+            <div className="relative w-full max-w-[400px] h-[420px] mb-6">
+              <Image
+                src={founder.imgUrl}
+                alt={founder.name}
+                fill
+                className="object-cover"
+              />
+              <div className="absolute bottom-4 right-4 w-8 h-8 bg-white flex items-center justify-center">
+                <span className="text-navy text-[12px] font-semibold">in</span>
+              </div>
             </div>
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">
+
+            <h3 className="font-semibold text-navy text-[24px] md:text-[26px] leading-[1.2] mb-1.5">
               {founder.name}
             </h3>
-            <p
-              className="text-gray-600 text-base lg:text-lg leading-relaxed max-w-2xl mb-6"
-              style={{ fontSize: "1rem" }}
-            >
-              {founder.bio}
+            <p className="font-normal text-pk-orange text-[14px] leading-[1.5] mb-5">
+              {founder.role}
             </p>
+
+            <div className="max-w-[600px]">
+              <p className="font-normal text-navy/70 text-[15px] md:text-[16px] leading-[1.7]">
+                {founder.bio}
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
   );
-};
+}

@@ -1,33 +1,57 @@
-import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-
-import { Button } from "@/components/ui/button";
 
 export function AboutPreview() {
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          <div className="space-y-4">
-            <h2 className="text-4xl font-bold text-gray-900">Who We Are</h2>
-            <p className="text-xl text-gray-600 leading-relaxed">
-              Property Kraft is a professional property and facility management
-              company supporting multi-location residential and commercial
-              properties. We deliver trusted, end-to-end property solutions that
-              maximize value and ensure seamless service.
+    <section className="relative bg-white w-full">
+      <div className="max-w-[1200px] mx-auto px-4 md:px-8 pt-16 md:pt-32 pb-14 md:pb-28">
+        <div className="flex flex-col gap-5 items-start w-full">
+          {/* Eyebrow */}
+          <p className="font-medium leading-[1.32] text-pk-orange text-[16px] tracking-[1px] uppercase">
+            About us
+          </p>
+
+          {/* Heading */}
+          <h2 className="font-semibold leading-[1.16] text-[#141513] text-[32px] md:text-[48px] max-w-[800px]">
+            Designed for Better Property Operations.
+          </h2>
+
+          {/* Body text */}
+          <div className="font-light leading-[1.6] text-pk-text-light text-[16px] md:text-[20px] w-full mt-5 space-y-[18px]">
+            <p>
+              Property Kraft is a property and facility management company
+              helping landlords, estates, and organizations manage properties
+              with structure and clarity.
+            </p>
+            <p>
+              From tenant management and rent administration to facility
+              operations and maintenance coordination, we provide the systems and
+              operational support needed to keep properties running efficiently.
+            </p>
+            <p>
+              Our approach combines experienced management with smart technology,
+              giving property owners better visibility, faster response times,
+              and reliable day-to-day operations across their assets.
             </p>
           </div>
 
-          <Link href="/about">
-            <Button
-              size="lg"
-              variant="outline"
-              className="group bg-transparent mt-6"
-              aria-label="Learn more about us"
+          {/* Read more link */}
+          <Link href="/about" className="flex items-center gap-2 mt-2 group">
+            <span className="font-medium text-pk-orange text-[16px] border-b border-pk-orange">
+              Read more
+            </span>
+            <svg
+              className="w-[18px] h-[18px]"
+              fill="none"
+              viewBox="0 0 18 18"
             >
-              Learn More About Us
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+              <path
+                d="M6.75 4.5L11.25 9L6.75 13.5"
+                stroke="#FF5000"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </Link>
         </div>
       </div>

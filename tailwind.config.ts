@@ -19,6 +19,10 @@ const config: Config = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["var(--font-dm-sans)", "system-ui", "sans-serif"],
+        serif: ["var(--font-bodoni-moda)", "Georgia", "serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -53,17 +57,17 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        orange: {
-          50: "#fff7ed",
-          100: "#ffedd5",
-          200: "#fed7aa",
-          300: "#fdba74",
-          400: "#fb923c",
-          500: "#f97316",
-          600: "#ea580c",
-          700: "#c2410c",
-          800: "#9a3412",
-          900: "#7c2d12",
+        navy: {
+          DEFAULT: "#0F172A",
+          light: "#1E293B",
+        },
+        pk: {
+          orange: "#FF5000",
+          "orange-hover": "#ff6a00",
+          text: "#282b27",
+          "text-light": "#51564e",
+          "text-muted": "#717182",
+          border: "#c1c5bf",
         },
       },
       borderRadius: {
@@ -80,10 +84,20 @@ const config: Config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "subtle-rotate": {
+          "0%, 100%": { transform: "rotate(0deg)" },
+          "50%": { transform: "rotate(15deg)" },
+        },
+        scroll: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "subtle-rotate": "subtle-rotate 8s ease-in-out infinite",
+        scroll: "scroll 50s linear infinite",
       },
     },
   },

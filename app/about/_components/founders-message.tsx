@@ -1,40 +1,35 @@
-import { MessageSquare } from "lucide-react";
+import Link from "next/link";
 
-export const FoundersMessage = () => {
+export function PhilosophyCta() {
   return (
-    <section className="py-20 bg-gradient-to-br from-orange-500 to-red-500 text-white relative overflow-hidden">
-      <div className="absolute inset-0">
-        <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
-        <div className="absolute bottom-10 right-10 w-48 h-48 bg-white/5 rounded-full blur-3xl"></div>
-      </div>
+    <section className="relative w-full bg-navy py-14 mb-12">
+      <div className="max-w-[1200px] w-full mx-auto px-5 md:px-10">
+        <div className="max-w-[900px] mx-auto text-center">
+          <h2 className="font-semibold text-white text-[32px] md:text-[40px] leading-[1.1] mb-5">
+            Our Philosophy
+          </h2>
 
-      <div className="container mx-auto px-4 relative">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex items-center space-x-3 mb-8 justify-center">
-            <h2 className="text-3xl font-bold">Founder's Message</h2>
-          </div>
+          <p className="font-normal text-white/80 text-[18px] md:text-[20px] leading-[1.6] mb-8">
+            We believe property management should be{" "}
+            <span className="font-medium text-pk-orange">organized</span>,{" "}
+            <span className="font-medium text-pk-orange">transparent</span>,{" "}
+            <span className="font-medium text-pk-orange">documented</span>, and{" "}
+            <span className="font-medium text-pk-orange">reliable</span> — not
+            dependent on scattered messages, memory, or informal processes.
+          </p>
 
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/20">
-            <div className="text-center space-y-6">
-              <div className="w-20 h-20 bg-orange-600 rounded-full flex items-center justify-center mx-auto">
-                <span className="text-2xl font-bold text-white">OO</span>
-              </div>
+          <p className="font-normal text-white text-[18px] md:text-[20px] leading-[1.4] mb-5">
+            Want us to manage your property?
+          </p>
 
-              <blockquote className="text-xl lg:text-2xl font-medium leading-relaxed italic">
-                "At Property Kraft, we understand that well-managed environments
-                create better communities. Our commitment is to deliver
-                professional, consistent, and people-focused property management
-                that adds value to every stakeholder."
-              </blockquote>
-
-              <div className="space-y-2">
-                <div className="text-xl font-semibold">Olatunji Oginni</div>
-                <div className="text-orange-200">Founder & CEO</div>
-              </div>
-            </div>
-          </div>
+          <Link
+            href="/contact"
+            className="inline-block bg-pk-orange hover:bg-pk-orange-hover transition-colors text-white px-8 py-3.5 rounded-lg font-medium text-[16px]"
+          >
+            Contact Us
+          </Link>
         </div>
       </div>
     </section>
   );
-};
+}

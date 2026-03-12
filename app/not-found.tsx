@@ -1,90 +1,66 @@
 import Link from "next/link";
-import { Home, Phone, Mail } from "lucide-react";
-
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
-      <div className="max-w-2xl mx-auto text-center">
-        <div className="mb-8">
-          <h1 className="text-9xl font-bold text-orange-600 mb-4">404</h1>
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Page Not Found
-          </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Sorry, we couldn't find the page you're looking for. It might have
-            been moved, deleted, or you entered the wrong URL.
-          </p>
-        </div>
+    <div className="min-h-screen bg-white flex items-center justify-center px-5">
+      <div className="max-w-[600px] mx-auto text-center">
+        <h1 className="font-semibold text-pk-orange text-[120px] md:text-[160px] leading-none mb-4">
+          404
+        </h1>
+        <h2 className="font-semibold text-navy text-[28px] md:text-[36px] leading-[1.2] mb-4">
+          Page Not Found
+        </h2>
+        <p className="font-normal text-pk-text-light text-[17px] leading-[1.6] mb-10 max-w-[480px] mx-auto">
+          Sorry, we couldn&apos;t find the page you&apos;re looking for. It
+          might have been moved or no longer exists.
+        </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <Link href="/">
-            <Button
-              size="lg"
-              className="bg-orange-600 hover:bg-orange-700 text-white"
-              aria-label="Back to home"
-            >
-              <Home className="w-5 h-5 mr-2" />
-              Go Home
-            </Button>
+        <div className="flex flex-col sm:flex-row gap-3 justify-center mb-14">
+          <Link
+            href="/"
+            className="inline-block bg-pk-orange hover:bg-pk-orange-hover transition-colors text-white px-7 py-3 rounded-lg font-medium text-[15px]"
+          >
+            Go Home
+          </Link>
+          <Link
+            href="/contact"
+            className="inline-block border border-pk-border hover:border-pk-orange/40 transition-colors text-navy px-7 py-3 rounded-lg font-medium text-[15px]"
+          >
+            Contact Us
           </Link>
         </div>
 
-        <Card className="text-left">
-          <CardHeader>
-            <CardTitle>Need Help?</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-gray-600 mb-4">
-              If you're having trouble finding what you're looking for, we're
-              here to help.
-            </p>
-            <div className="space-y-3">
-              <div className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-orange-600" />
-                <div>
-                  <div className="font-medium">Call us</div>
-                  <div className="text-sm text-gray-600">+234 816 549 0072</div>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-orange-600" />
-                <div>
-                  <div className="font-medium">Email us</div>
-                  <div className="text-sm text-gray-600">
-                    hello@propertykraft.africa
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-6 pt-6 border-t border-gray-200">
-              <h3 className="font-medium mb-3 text-base">Popular Pages</h3>
-              <div className="grid grid-cols-2 gap-2 text-sm">
-                <Link href="/about" className="text-orange-600 hover:underline">
-                  About Us
-                </Link>
-                <Link
-                  href="/services"
-                  className="text-orange-600 hover:underline"
-                >
-                  Our Services
-                </Link>
-                <Link
-                  href="/contact"
-                  className="text-orange-600 hover:underline"
-                >
-                  Contact
-                </Link>
-                <Link href="/legal" className="text-orange-600 hover:underline">
-                  Legal Info
-                </Link>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+        <div className="border-t border-pk-border pt-8">
+          <p className="font-medium text-navy text-[15px] mb-4">
+            Popular Pages
+          </p>
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[14px]">
+            <Link
+              href="/about"
+              className="text-pk-orange hover:underline"
+            >
+              About Us
+            </Link>
+            <Link
+              href="/services"
+              className="text-pk-orange hover:underline"
+            >
+              Our Services
+            </Link>
+            <Link
+              href="/contact"
+              className="text-pk-orange hover:underline"
+            >
+              Contact
+            </Link>
+            <Link
+              href="/faq"
+              className="text-pk-orange hover:underline"
+            >
+              FAQ
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );

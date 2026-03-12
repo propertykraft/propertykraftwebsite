@@ -1,23 +1,23 @@
-export const Hero = () => {
+export function Hero() {
   return (
-    <section className="py-20 bg-gradient-to-br from-orange-50 to-white relative overflow-hidden">
-      <div className="absolute top-10 right-10 w-32 h-32 bg-orange-200/30 rounded-full blur-2xl"></div>
-      <div className="absolute bottom-10 left-10 w-48 h-48 bg-orange-300/20 rounded-full blur-3xl"></div>
+    <section className="relative w-full bg-white pt-[100px] pb-[60px]">
+      <div className="max-w-[1200px] w-full mx-auto px-5 md:px-10">
+        <div className="max-w-[800px]">
+          <p className="font-medium text-pk-orange text-[14px] uppercase tracking-wider mb-4">
+            Contact
+          </p>
 
-      <div className="container mx-auto px-4 relative">
-        <div className="max-w-4xl mx-auto text-center space-y-6">
-          <div className="inline-block px-4 py-2 bg-orange-100 text-orange-700 rounded-full text-sm font-medium animate-bounce-subtle">
-            ✨ Get In Touch
-          </div>
-          <h1 className="text-5xl font-bold text-gray-900 animate-fade-in-up">
-            Contact and Support
+          <h1 className="font-semibold text-navy text-[40px] md:text-[52px] lg:text-[64px] leading-[1.1] mb-6">
+            Let&apos;s Talk.
           </h1>
-          <p className="text-xl text-gray-600 leading-relaxed animate-fade-in-up">
-            We're here to support residents, tenants, and partners. Reach out
-            using the form below or through any of our direct contact channels.
+
+          <p className="font-normal text-navy/70 text-[18px] md:text-[20px] leading-[1.6] max-w-[600px]">
+            If you&apos;re interested in working with Property Kraft or want to
+            learn more about our property management systems, we&apos;d love to
+            hear from you.
           </p>
         </div>
       </div>
     </section>
   );
-};
+}
