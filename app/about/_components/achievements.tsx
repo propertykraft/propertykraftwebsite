@@ -1,27 +1,26 @@
-import { achievements } from "./data";
-
-export const AchievementsPreview = () => {
+export function WhyWeExist() {
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {achievements.map((achievement, index) => (
-            <div
-              key={achievement.label}
-              className="text-center p-6 rounded-2xl bg-gradient-to-br from-orange-50 to-white border border-orange-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-2"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="text-3xl font-bold text-gray-900 mb-2">
-                {achievement.number}
-              </div>
-              <div className="text-lg font-semibold text-orange-500 mb-2">
-                {achievement.label}
-              </div>
-              <p className="text-gray-600 text-sm">{achievement.description}</p>
-            </div>
-          ))}
+    <section className="relative w-full bg-white py-[80px] md:py-[100px]">
+      <div className="max-w-[1200px] w-full mx-auto px-5 md:px-10">
+        <div className="max-w-[900px] mx-auto">
+          <h2 className="font-semibold text-navy text-[32px] md:text-[40px] leading-[1.2] mb-8 text-center">
+            Why Property Kraft Exists
+          </h2>
+
+          <div className="space-y-6">
+            <p className="font-normal text-navy/70 text-[17px] md:text-[18px] leading-[1.8]">
+              Property management in many environments still relies on informal
+              communication, manual record-keeping, and reactive coordination.
+            </p>
+            <p className="font-normal text-navy/70 text-[17px] md:text-[18px] leading-[1.8]">
+              Property Kraft was created to bring structure, accountability, and
+              clear oversight to property operations — ensuring landlords and
+              organizations can manage buildings more efficiently and with
+              greater confidence.
+            </p>
+          </div>
         </div>
       </div>
     </section>
   );
-};
+}

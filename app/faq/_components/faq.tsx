@@ -1,11 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown, Phone } from "lucide-react";
+import { Plus, Minus } from "lucide-react";
 import Link from "next/link";
 
 import { faqData, faqCategories } from "./data";
-import { Button } from "@/components/ui/button";
 
 export function FAQ() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -21,23 +20,26 @@ export function FAQ() {
   };
 
   return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-4">
+    <section className="py-16 md:py-24 bg-white">
+      <div className="max-w-[1200px] mx-auto px-5 md:px-10">
+        {/* Category Filters */}
         <div className="mb-12">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6 text-center">
+          <h2 className="font-semibold text-navy text-[22px] mb-6 text-center">
             Browse by Category
           </h2>
           <div className="flex flex-wrap justify-center gap-3">
             {faqCategories.map((category) => (
               <button
                 key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                onClick={() => {
+                  setSelectedCategory(category);
+                  setOpenItem(null);
+                }}
+                className={`px-4 py-2 rounded-lg text-[14px] font-medium transition-colors ${
                   selectedCategory === category
-                    ? "bg-orange-500 text-white"
-                    : "bg-orange-50/50 text-gray-700 hover:bg-orange-50"
+                    ? "bg-pk-orange text-white"
+                    : "bg-[#f8f9fa] text-pk-text-light hover:bg-[#f1f3f5]"
                 }`}
-                aria-label="FAQ category"
               >
                 {category}
               </button>
@@ -46,55 +48,75 @@ export function FAQ() {
         </div>
 
         {/* FAQ Items */}
-        <div className="max-w-4xl mx-auto">
-          <div className="space-y-4">
+        <div className="max-w-[820px] mx-auto">
+          <div className="flex flex-col w-full">
             {filteredFAQs.map((faq, index) => (
-              <div key={index} className="shadow-sm rounded-lg overflow-hidden">
-                <button
-                  onClick={() => toggleItem(index)}
-                  className="w-full px-6 py-4 text-left bg-orange-50/10 hover:bg-orange-50 transition-colors flex justify-between items-center"
-                  aria-label="FAQ item"
-                >
-                  <h3 className="text-lg font-medium text-gray-900 pr-4">
-                    {faq.question}
-                  </h3>
-                  <ChevronDown
-                    className={`w-5 h-5 text-gray-500 transition-transform ${
-                      openItem === index ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
-                {openItem === index && (
-                  <div className="px-6 py-4 bg-white">
-                    <p className="text-gray-700 leading-relaxed">
-                      {faq.answer}
-                    </p>
+              <div
+                key={index}
+                className="w-full border-b border-[#E5E7EB]/40"
+              >
+                <div className="py-9 md:py-10">
+                  <div
+                    className="flex items-start justify-between gap-6 group cursor-pointer"
+                    onClick={() => toggleItem(index)}
+                  >
+                    <div className="flex-1">
+                      <p className="font-normal leading-[1.65] text-[#141513] text-[17px] md:text-[19px] transition-colors duration-200 group-hover:text-pk-orange">
+                        {faq.question}
+                      </p>
+                    </div>
+                    <div
+                      className="shrink-0 mt-1 transition-transform duration-300"
+                      style={{
+                        transform:
+                          openItem === index
+                            ? "rotate(180deg)"
+                            : "rotate(0deg)",
+                      }}
+                    >
+                      {openItem === index ? (
+                        <Minus className="w-5 h-5 text-pk-orange" strokeWidth={2} />
+                      ) : (
+                        <Plus className="w-5 h-5 text-pk-orange" strokeWidth={2} />
+                      )}
+                    </div>
                   </div>
-                )}
+
+                  <div
+                    className="transition-all duration-400 ease-in-out overflow-hidden"
+                    style={{
+                      maxHeight: openItem === index ? "500px" : "0",
+                      opacity: openItem === index ? 1 : 0,
+                      transitionProperty: "max-height, opacity",
+                    }}
+                  >
+                    <div className="pt-5 pr-11">
+                      <p className="font-normal leading-[1.7] text-pk-text-light text-[17px]">
+                        {faq.answer}
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
         </div>
 
+        {/* Still Have Questions CTA */}
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-br from-orange-50 to-white rounded-lg p-8">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+          <div className="bg-navy rounded-xl px-8 py-12">
+            <h3 className="font-semibold text-white text-[24px] md:text-[28px] mb-4">
               Still have questions?
             </h3>
-            <p className="text-gray-600 mb-6">
-              Our team is here to help. Get in touch with us for personalized
+            <p className="font-normal text-white/80 text-[16px] mb-6">
+              Our team is here to help. Get in touch for personalized
               assistance.
             </p>
-            <Link href="/contact">
-              <Button
-                variant="outline"
-                size="lg"
-                className="group bg-orange-500 text-white hover:bg-orange-600 hover:text-white"
-                aria-label="Contact us"
-              >
-                <Phone className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />
-                Contact Us
-              </Button>
+            <Link
+              href="/contact"
+              className="inline-block bg-pk-orange hover:bg-pk-orange-hover transition-colors text-white px-7 py-3 rounded-lg font-medium text-[15px]"
+            >
+              Contact Us
             </Link>
           </div>
         </div>

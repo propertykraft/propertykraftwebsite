@@ -5,20 +5,13 @@ import { cn } from "@/lib/utils";
 
 export const Logo = ({
   className,
-  variant = "dark",
 }: {
   className?: string;
-  variant?: "light" | "dark";
 }) => {
   return (
     <Link href="/" className={cn("flex items-center space-x-2", className)}>
-      <Image src="/logo-icon.png" alt="logo" width={32} height={32} />
-      <span
-        className={cn(
-          "text-xl font-bold",
-          variant === "light" ? "text-white" : "text-gray-900"
-        )}
-      >
+      <Image src="/logo-icon.png" alt="Property Kraft" width={32} height={32} />
+      <span className="text-xl font-bold text-white">
         Property Kraft
       </span>
     </Link>

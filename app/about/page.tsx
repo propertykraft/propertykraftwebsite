@@ -1,25 +1,25 @@
 import { Metadata } from "next";
 
 import {
-  AchievementsPreview,
-  BoardOfDirectors,
-  FoundersMessage,
   Hero,
-  VisionAndMissionPreview,
+  WhoWeAre,
+  WhyWeExist,
   Leadership,
-  TeamMembers,
+  AdvisoryBoard,
+  CoreTeam,
+  PhilosophyCta,
 } from "./_components";
 import { BASE_URL } from "@/lib/constants";
 import { createCanonicalMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Our Mission, Vision & Team",
+  title: "About Us",
   description:
-    "Discover Property Kraft's mission, vision, and the dedicated team behind our success. Learn how we deliver trusted property and facility management solutions for residential and commercial clients across Africa.",
+    "Property Kraft is a property and facility management company that helps landlords and organizations manage buildings with clarity, accountability, and reliable operational oversight.",
   openGraph: {
-    title: "Our Mission, Vision & Team - Property Kraft Africa",
+    title: "About Us - Property Kraft Africa",
     description:
-      "Discover Property Kraft's mission, vision, and the dedicated team behind our success. Learn how we deliver trusted property and facility management solutions for residential and commercial clients across Africa.",
+      "Property Kraft is a property and facility management company that helps landlords and organizations manage buildings with clarity, accountability, and reliable operational oversight.",
     url: `${BASE_URL}/about`,
   },
   ...createCanonicalMetadata("about"),
@@ -27,14 +27,14 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-white pt-20">
+    <main className="min-h-screen bg-white">
       <Hero />
-      <AchievementsPreview />
-      <VisionAndMissionPreview />
-      <FoundersMessage />
-      <BoardOfDirectors />
+      <WhoWeAre />
+      <WhyWeExist />
       <Leadership />
-      <TeamMembers />
+      <AdvisoryBoard />
+      <CoreTeam />
+      <PhilosophyCta />
     </main>
   );
 }

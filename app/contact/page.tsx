@@ -1,18 +1,17 @@
-import { BASE_URL } from "@/lib/constants";
 import { Metadata } from "next";
 
-import { ContactForm, Hero, ContactMethods } from "./_components";
+import { Hero, ContactSection } from "./_components";
+import { BASE_URL } from "@/lib/constants";
 import { createCanonicalMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Get in Touch",
+  title: "Contact Us",
   description:
-    "Reach out to Property Kraft for inquiries, support, or partnership opportunities. Our team is ready to assist you with all your property and facility management needs.",
+    "Get in touch with Property Kraft. Send us a message about your property management needs and our team will respond within 1–2 business days.",
   openGraph: {
-    title: "Get in Touch - Property Kraft Africa",
+    title: "Contact Us - Property Kraft Africa",
     description:
-      "Reach out to Property Kraft for inquiries, support, or partnership opportunities. Our team is ready to assist you with all your property and facility management needs.",
-
+      "Get in touch with Property Kraft. Send us a message about your property management needs and our team will respond within 1–2 business days.",
     url: `${BASE_URL}/contact`,
   },
   ...createCanonicalMetadata("contact"),
@@ -20,10 +19,9 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-white pt-20">
+    <main className="min-h-screen bg-white">
       <Hero />
-      <ContactMethods />
-      <ContactForm />
+      <ContactSection />
     </main>
   );
 }

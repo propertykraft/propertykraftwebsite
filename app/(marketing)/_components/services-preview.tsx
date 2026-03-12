@@ -1,87 +1,75 @@
-import Link from "next/link";
-import { CheckCircle } from "lucide-react";
-import Image from "next/image";
+import { Users, DollarSign, Wrench } from "lucide-react";
 
-import { services } from "./data";
-import { Button } from "@/components/ui/button";
+const features = [
+  {
+    icon: Users,
+    title: "Tenant & Lease Administration",
+    description:
+      "We oversee tenant onboarding, lease documentation, renewals, and communication — ensuring every agreement is structured, documented, and properly managed from start to finish.",
+  },
+  {
+    icon: DollarSign,
+    title: "Rent & Financial Management",
+    description:
+      "We coordinate rent administration, track payments, monitor outstanding balances, and provide clear financial visibility so you always understand the performance of your property.",
+  },
+  {
+    icon: Wrench,
+    title: "Facility & Maintenance",
+    description:
+      "We manage maintenance requests, inspections, and vendor coordination to keep your properties running efficiently and professionally — without reactive chaos.",
+  },
+];
 
 export function ServicesPreview() {
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center space-y-4 mb-16">
-          <h2 className="text-4xl font-bold text-gray-900">
-            Our Core Services
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We offer a comprehensive range of professional property and facility
-            management services designed to keep your buildings functional,
-            secure, and efficient.
-          </p>
-        </div>
+    <section className="bg-white w-full">
+      <div className="max-w-[1200px] mx-auto px-4 md:px-8 py-16 md:py-32">
+        <div className="flex flex-col gap-12 md:gap-16 items-center w-full">
+          {/* Section heading */}
+          <div className="flex flex-col gap-5 items-start w-full">
+            <p className="font-medium leading-[1.32] text-pk-orange text-[16px] tracking-[1px] uppercase">
+              Solutions
+            </p>
+            <h2 className="font-semibold leading-[1.15] text-[#141513] text-[32px] md:text-[48px]">
+              Complete Oversight for Your Properties.
+            </h2>
+          </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Services List */}
-          <div className="space-y-6">
-            {services.map((service, index) => (
+          {/* Feature cards */}
+          <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start justify-center w-full">
+            {features.map((feature) => (
               <div
-                key={service.title}
-                className="flex items-start space-x-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                key={feature.title}
+                className="flex-1 min-w-0 md:min-w-[260px] relative"
               >
-                <div className="flex-shrink-0">
-                  <CheckCircle className="w-6 h-6 text-orange-500" />
+                <div className="flex flex-col gap-6 items-start pt-10 pb-8">
+                  {/* Icon */}
+                  <div className="shrink-0 size-12">
+                    <feature.icon
+                      className="size-12 text-pk-orange"
+                      strokeWidth={1.5}
+                    />
+                  </div>
+
+                  {/* Text */}
+                  <div className="flex flex-col gap-3 w-full">
+                    <h3 className="font-semibold leading-[1.28] text-pk-text text-[20px]">
+                      {feature.title}
+                    </h3>
+                    <p className="font-normal leading-[1.58] text-pk-text-light text-[16px]">
+                      {feature.description}
+                    </p>
+                  </div>
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-gray-900">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600">{service.description}</p>
-                </div>
+                {/* Top border */}
+                <div
+                  aria-hidden="true"
+                  className="absolute border-pk-border/40 border-solid border-t inset-0 pointer-events-none"
+                />
               </div>
             ))}
           </div>
-
-          <div className="relative">
-            <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-              <Image
-                src="/our-service-01.jpg"
-                alt="Professional property management"
-                className="w-full h-[500px] object-cover"
-                priority
-                width={500}
-                height={500}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-            </div>
-
-            {/* Floating Stats */}
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-6 shadow-xl">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-orange-500">500+</div>
-                <div className="text-sm text-gray-600">Properties Managed</div>
-              </div>
-            </div>
-
-            <div className="absolute -top-6 -right-6 bg-orange-500 rounded-2xl p-6 shadow-xl text-white">
-              <div className="text-center">
-                <div className="text-3xl font-bold">24/7</div>
-                <div className="text-sm opacity-90">Support Available</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="text-center mt-16">
-          <Link href="/services">
-            <Button
-              size="lg"
-              className="bg-orange-500 hover:bg-orange-600 text-white"
-              aria-label="View All Services"
-            >
-              View All Services
-            </Button>
-          </Link>
         </div>
       </div>
     </section>

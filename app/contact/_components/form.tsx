@@ -1,221 +1,181 @@
 "use client";
 
 import { useState } from "react";
-import { Clock, User, Send, CheckCircle } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { responsePolicy } from "./data";
-
-export const ContactForm = () => {
+export function ContactSection() {
   const [formData, setFormData] = useState({
-    name: "",
+    fullName: "",
     email: "",
-    phone: "",
+    company: "",
+    subject: "",
     message: "",
   });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+  };
+
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center">
-                <Send className="w-5 h-5 text-white" />
-              </div>
-              <h2 className="text-2xl font-bold text-gray-900">
-                Send us a Message
-              </h2>
-            </div>
+    <section className="relative w-full bg-white py-[60px] md:py-[80px]">
+      <div className="max-w-[1200px] w-full mx-auto px-5 md:px-10">
+        <div className="flex flex-col md:flex-row gap-10 md:gap-16">
+          {/* Left Column — Contact Info */}
+          <div className="w-full md:w-[40%]">
+            <h2 className="font-semibold text-navy text-[28px] md:text-[32px] leading-[1.2] mb-5">
+              Get in Touch
+            </h2>
+            <p className="font-normal text-navy/70 text-[16px] leading-[1.7] mb-8">
+              Send us a message and our team will respond within 1–2 business
+              days.
+            </p>
 
-            {isSubmitted ? (
-              <div className="text-center py-12">
-                <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Message Sent!
-                </h3>
-                <p className="text-gray-600">
-                  Thank you for contacting us. We'll get back to you soon.
-                </p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Full Name *
-                  </label>
-                  <Input
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Enter your full name"
-                    className="transition-all duration-300 focus:ring-2 focus:ring-orange-500"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Email Address *
-                  </label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="Enter your email address"
-                    className="transition-all duration-300 focus:ring-2 focus:ring-orange-500"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Phone (Optional)
-                  </label>
-                  <Input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    placeholder="Enter your phone number"
-                    className="transition-all duration-300 focus:ring-2 focus:ring-orange-500"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Message *
-                  </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    required
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Tell us how we can help you"
-                    rows={5}
-                    className="transition-all duration-300 focus:ring-2 focus:ring-orange-500"
-                  />
-                </div>
-
-                <Button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-orange-500 hover:bg-orange-600 text-white transition-all duration-300 hover:shadow-lg"
-                  aria-label="Send a message"
+            <div className="space-y-4">
+              <ContactDetail label="Email">
+                <a
+                  href="mailto:hello@propertykraft.africa"
+                  className="font-normal text-navy/70 text-[16px] hover:text-pk-orange transition-colors"
                 >
-                  {isSubmitting ? (
-                    <>
-                      <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                      Sending...
-                    </>
-                  ) : (
-                    <>
-                      <Send className="w-4 h-4 mr-2" />
-                      Send Message
-                    </>
-                  )}
-                </Button>
-              </form>
-            )}
+                  hello@propertykraft.africa
+                </a>
+              </ContactDetail>
+
+              <ContactDetail label="Phone">
+                <p className="font-normal text-navy/70 text-[16px]">
+                  08036322847
+                </p>
+              </ContactDetail>
+
+              <ContactDetail label="Location">
+                <p className="font-normal text-navy/70 text-[16px]">
+                  17 Ayinde Akinmade Street, Lekki Phase One, Lagos, Nigeria.
+                </p>
+              </ContactDetail>
+            </div>
           </div>
 
-          {/* Response Policy */}
-          <div className="space-y-8">
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center">
-                  <Clock className="w-5 h-5 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900">
-                  Response Policy
-                </h3>
+          {/* Right Column — Form */}
+          <div className="w-full md:w-[60%]">
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <FormField
+                label="Full Name"
+                id="fullName"
+                type="text"
+                required
+                value={formData.fullName}
+                onChange={handleChange}
+              />
+              <FormField
+                label="Email Address"
+                id="email"
+                type="email"
+                required
+                value={formData.email}
+                onChange={handleChange}
+              />
+              <FormField
+                label="Company / Organization"
+                id="company"
+                type="text"
+                value={formData.company}
+                onChange={handleChange}
+                optional
+              />
+              <FormField
+                label="Subject"
+                id="subject"
+                type="text"
+                required
+                value={formData.subject}
+                onChange={handleChange}
+              />
+
+              <div>
+                <label
+                  htmlFor="message"
+                  className="block font-medium text-navy text-[14px] mb-2"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows={6}
+                  className="w-full px-4 py-3 bg-white border border-pk-border rounded-lg text-[16px] text-navy focus:outline-none focus:border-pk-orange transition-colors resize-vertical"
+                />
               </div>
 
-              <div className="space-y-4">
-                {responsePolicy.map((policy, index) => (
-                  <div
-                    key={policy.title}
-                    className="flex items-start space-x-4 p-4 bg-gray-50 rounded-xl"
-                  >
-                    <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
-                      <policy.icon className="w-4 h-4 text-white" />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-gray-900">
-                        {policy.title}
-                      </div>
-                      <div className="text-orange-500 font-medium text-sm">
-                        {policy.time}
-                      </div>
-                      <div className="text-gray-600 text-sm">
-                        {policy.description}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="bg-orange-50 rounded-2xl p-8 border border-orange-200">
-              <div className="flex items-center space-x-3 mb-4">
-                <div className="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center">
-                  <User className="w-5 h-5 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900">
-                  Escalation Contact
-                </h3>
-              </div>
-              <div className="space-y-3">
-                <div className="font-semibold text-gray-900">
-                  Property Kraft support
-                </div>
-                <div className="text-gray-600">Phone: +234 803 632 2847</div>
-                <div className="text-gray-600">
-                  For urgent matters requiring immediate attention
-                </div>
-              </div>
-            </div>
+              <button
+                type="submit"
+                className="w-full px-6 py-3.5 bg-pk-orange text-white rounded-lg font-medium text-[16px] hover:bg-pk-orange-hover transition-colors"
+              >
+                Send Message
+              </button>
+            </form>
           </div>
         </div>
       </div>
     </section>
   );
-};
+}
+
+function ContactDetail({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div>
+      <p className="font-medium text-navy text-[14px] uppercase tracking-wider mb-1.5">
+        {label}
+      </p>
+      {children}
+    </div>
+  );
+}
+
+function FormField({
+  label,
+  id,
+  type,
+  required,
+  value,
+  onChange,
+  optional,
+}: {
+  label: string;
+  id: string;
+  type: string;
+  required?: boolean;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  optional?: boolean;
+}) {
+  return (
+    <div>
+      <label htmlFor={id} className="block font-medium text-navy text-[14px] mb-2">
+        {label}
+        {optional && <span className="text-navy/50"> (optional)</span>}
+      </label>
+      <input
+        type={type}
+        id={id}
+        name={id}
+        value={value}
+        onChange={onChange}
+        required={required}
+        className="w-full px-4 py-3 bg-white border border-pk-border rounded-lg text-[16px] text-navy focus:outline-none focus:border-pk-orange transition-colors"
+      />
+    </div>
+  );
+}

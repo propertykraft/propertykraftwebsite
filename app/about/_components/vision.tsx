@@ -1,39 +1,30 @@
-import { Target, Users } from "lucide-react";
-
-export const VisionAndMissionPreview = () => {
+export function WhoWeAre() {
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12">
-          <div className="space-y-6 p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-            <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center">
-                <Target className="w-6 h-6 text-white" />
-              </div>
-              <h2 className="text-3xl font-bold text-gray-900">Our Vision</h2>
-            </div>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              To be Africa's benchmark for transparent, responsive, and
-              high-performing property and facilities management, setting new
-              standards of excellence in the industry.
-            </p>
-          </div>
+    <section className="relative w-full bg-white py-[80px] md:py-[100px]">
+      <div className="max-w-[1200px] w-full mx-auto px-5 md:px-10">
+        <div className="max-w-[900px] mx-auto">
+          <h2 className="font-semibold text-navy text-[32px] md:text-[40px] leading-[1.2] mb-8 text-center">
+            Who We Are
+          </h2>
 
-          <div className="space-y-6 p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-            <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center">
-                <Users className="w-6 h-6 text-white" />
-              </div>
-              <h2 className="text-3xl font-bold text-gray-900">Our Mission</h2>
-            </div>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              To deliver trusted, end-to-end property solutions that maximize
-              value, ensure seamless service, and provide full operational
-              transparency to all our stakeholders.
+          <div className="space-y-6">
+            <p className="font-normal text-navy/70 text-[17px] md:text-[18px] leading-[1.8]">
+              Property Kraft was created to improve how properties are managed.
+              Many landlords struggle with fragmented communication, reactive
+              maintenance, and inconsistent tenant coordination.
+            </p>
+            <p className="font-normal text-navy/70 text-[17px] md:text-[18px] leading-[1.8]">
+              Our approach brings structure to property operations through clear
+              processes, reliable oversight, and organized documentation.
+            </p>
+            <p className="font-normal text-navy/70 text-[17px] md:text-[18px] leading-[1.8]">
+              Alongside our management services, we also built Lizt — a
+              WhatsApp-based tool that helps simplify communication between
+              landlords, tenants, and facility teams.
             </p>
           </div>
         </div>
       </div>
     </section>
   );
-};
+}

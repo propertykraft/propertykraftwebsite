@@ -1,26 +1,27 @@
-export const Hero = () => {
+export function Hero() {
   return (
-    <section className="py-20 bg-gradient-to-br from-orange-50 to-white relative overflow-hidden">
-      <div className="absolute top-10 right-10 w-32 h-32 bg-orange-200/30 rounded-full blur-2xl"></div>
-      <div className="absolute bottom-10 left-10 w-48 h-48 bg-orange-300/20 rounded-full blur-3xl"></div>
+    <section className="relative w-full bg-white py-[80px] md:py-[120px]">
+      <div className="max-w-[1200px] w-full mx-auto px-5 md:px-10">
+        <div className="max-w-[800px]">
+          <div className="w-[60px] h-[3px] bg-pk-orange mb-8" />
 
-      <div className="container mx-auto px-4 relative">
-        <div className="max-w-4xl mx-auto text-center space-y-6">
-          <div className="inline-block px-4 py-2 bg-orange-100 text-orange-700 rounded-full text-sm font-medium animate-bounce-subtle">
-            ✨ About Property Kraft
-          </div>
-          <h1 className="text-5xl font-bold text-gray-900 animate-fade-in-up">
-            About Property Kraft
+          <h1 className="font-semibold text-navy text-[36px] md:text-[48px] lg:text-[56px] leading-[1.15] mb-6">
+            Bringing Structure to Modern Property Management.
           </h1>
-          <p className="text-xl text-gray-600 leading-relaxed animate-fade-in-up">
-            Property Kraft is a professional property and facility management
-            company providing tailored solutions across multiple residential and
-            commercial sites. Established in 2020, our mission is to manage
-            every property with care, professionalism, and operational
-            excellence.
-          </p>
+
+          <div className="space-y-6">
+            <p className="font-normal text-navy/70 text-[18px] md:text-[20px] leading-[1.7]">
+              Property Kraft is a property and facility management company that
+              helps landlords and organizations manage buildings with clarity,
+              accountability, and reliable operational oversight.
+            </p>
+            <p className="font-normal text-navy/70 text-[18px] md:text-[20px] leading-[1.7]">
+              We combine experienced management with structured systems to keep
+              properties running smoothly.
+            </p>
+          </div>
         </div>
       </div>
     </section>
   );
-};
+}

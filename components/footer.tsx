@@ -1,72 +1,30 @@
 import Link from "next/link";
 
-import { Logo } from "./logo";
-import { navLinks } from "./data";
+import { footerLinks } from "./data";
 
 export function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8">
-          <div className="space-y-4">
-            <Logo variant="light" />
-            <p className="text-gray-400">
-              Your trusted partner in professional property and facility
-              management.
-            </p>
-          </div>
+    <footer className="bg-white w-full">
+      <div className="max-w-[1200px] mx-auto px-4 md:px-8 pb-12">
+        {/* Divider line */}
+        <div className="h-px bg-pk-border" />
 
-          <div>
-            <h3 className="font-semibold mb-4">Quick Links</h3>
-            <div className="space-y-2">
-              {navLinks.map(({ href, label }) => (
-                <Link
-                  href={href}
-                  className="block text-gray-400 hover:text-orange-500 transition-colors"
-                >
-                  {label}
-                </Link>
-              ))}
-            </div>
-          </div>
+        {/* Content row */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 py-6">
+          <p className="text-[14px] text-[#838b7f] font-normal">
+            ©{new Date().getFullYear()} Property Kraft · All rights reserved.
+          </p>
 
-          <div>
-            <h3 className="font-semibold mb-4">Services</h3>
-            <div className="space-y-2">
-              <div className="text-gray-400">Property Management</div>
-              <div className="text-gray-400">Cleaning Services</div>
-              <div className="text-gray-400">Security</div>
-              <div className="text-gray-400">Maintenance</div>
-            </div>
-          </div>
-
-          <div>
-            <h3 className="font-semibold mb-4">Contact Info</h3>
-            <div className="space-y-2 text-gray-400">
-              <div>Email: hello@propertykraft.africa</div>
-              <div>Phone: +234 816 549 0072</div>
-              <div>Hours: Mon-Fri, 9 AM – 6 PM</div>
-            </div>
-          </div>
-        </div>
-
-        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <div className="text-gray-400">
-            © {new Date().getFullYear()} Property Kraft. All rights reserved.
-          </div>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link
-              href="/legal?tab=terms"
-              className="text-gray-400 hover:text-orange-500 transition-colors"
-            >
-              Terms of Service
-            </Link>
-            <Link
-              href="/legal?tab=privacy"
-              className="text-gray-400 hover:text-orange-500 transition-colors"
-            >
-              Privacy Policy
-            </Link>
+          <div className="flex items-center gap-6">
+            {footerLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-[14px] text-[#656b61] font-medium hover:text-pk-orange transition-colors duration-200"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>
