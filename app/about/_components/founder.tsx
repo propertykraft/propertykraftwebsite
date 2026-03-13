@@ -31,9 +31,16 @@ export function Leadership() {
                 fill
                 className="object-cover"
               />
-              <div className="absolute bottom-4 right-4 w-8 h-8 bg-white flex items-center justify-center">
-                <span className="text-navy text-[12px] font-semibold">in</span>
-              </div>
+              {founder.linkedIn && (
+                <a
+                  href={founder.linkedIn}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute bottom-4 right-4 w-8 h-8 bg-white flex items-center justify-center hover:bg-gray-100 transition-colors"
+                >
+                  <span className="text-navy text-[12px] font-semibold">in</span>
+                </a>
+              )}
             </div>
 
             <h3 className="font-semibold text-navy text-[24px] md:text-[26px] leading-[1.2] mb-1.5">

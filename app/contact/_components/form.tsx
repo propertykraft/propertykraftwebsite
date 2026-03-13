@@ -10,6 +10,9 @@ export function ContactSection() {
     subject: "",
     message: "",
   });
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
+    "idle",
+  );
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -17,8 +20,24 @@ export function ContactSection() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setStatus("sending");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) throw new Error();
+
+      setStatus("sent");
+      setFormData({ fullName: "", email: "", company: "", subject: "", message: "" });
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -115,10 +134,22 @@ export function ContactSection() {
 
               <button
                 type="submit"
-                className="w-full px-6 py-3.5 bg-pk-orange text-white rounded-lg font-medium text-[16px] hover:bg-pk-orange-hover transition-colors"
+                disabled={status === "sending"}
+                className="w-full px-6 py-3.5 bg-pk-orange text-white rounded-lg font-medium text-[16px] hover:bg-pk-orange-hover transition-colors disabled:opacity-60"
               >
-                Send Message
+                {status === "sending" ? "Sending..." : "Send Message"}
               </button>
+
+              {status === "sent" && (
+                <p className="text-green-600 text-[14px] text-center mt-3">
+                  Message sent successfully! We&apos;ll get back to you soon.
+                </p>
+              )}
+              {status === "error" && (
+                <p className="text-red-600 text-[14px] text-center mt-3">
+                  Failed to send message. Please try again.
+                </p>
+              )}
             </form>
           </div>
         </div>

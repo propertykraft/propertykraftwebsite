@@ -80,7 +80,7 @@ function ContentWrapper() {
 
       {/* CTA Button */}
       <a
-        href="https://wa.me/2348165490072?text=Hello"
+        href="https://wa.me/2348036322847?text=Hello"
         target="_blank"
         rel="noopener noreferrer"
         className="relative rounded-xl md:rounded-2xl bg-transparent hover:bg-pk-orange transition-all duration-200 cursor-pointer group"

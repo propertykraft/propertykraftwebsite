@@ -38,7 +38,7 @@ export const faqData: FAQItem[] = [
   {
     question: "How do I get started with Property Kraft?",
     answer:
-      "Getting started is easy! Simply contact us via phone (+234 816 549 0072) or email (hello@propertykraft.africa) for a free consultation. We'll assess your property and create a customized management plan.",
+      "Getting started is easy! Simply contact us via phone (+234 803 632 2847) or email (hello@propertykraft.africa) for a free consultation. We'll assess your property and create a customized management plan.",
     category: "Getting Started",
   },
   {
