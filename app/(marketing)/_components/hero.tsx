@@ -66,7 +66,7 @@ function ContentWrapper() {
   return (
     <div className="flex flex-col gap-9 items-start flex-1 md:min-w-[360px]">
       <div className="flex flex-col gap-10 items-start w-full">
-        <p className="font-medium leading-[1.08] text-white text-[32px] md:text-[48px] whitespace-pre-wrap">
+        <p className="font-medium leading-[1.08] text-white text-[32px] md:text-[48px] whitespace-pre-wrap -mb-4">
           Complete Property and Facility Management You Can Rely On.
         </p>
         <div className="w-full max-w-[580px]">

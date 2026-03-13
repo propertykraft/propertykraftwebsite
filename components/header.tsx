@@ -38,21 +38,13 @@ export function Header() {
 
   return (
     <header className="relative z-50 bg-navy">
-      {/* Atmospheric gradient overlay */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse 1200px 1100px at 30% 15%, rgba(255, 255, 255, 0.07) 0%, rgba(15, 23, 42, 0) 70%)",
-        }}
-      />
 
       <div className="relative max-w-[1200px] mx-auto px-4 md:px-8 flex items-center justify-between py-4 md:py-6">
         <Logo />
 
-        {/* Desktop Nav */}
+        {/* Desktop Nav — centered */}
         <nav
-          className="hidden md:flex items-center gap-10 absolute left-1/2 transform -translate-x-1/2"
+          className="hidden md:flex flex-1 items-center justify-center gap-8"
           ref={dropdownRef}
         >
           {navLinks.map((link) =>
@@ -60,11 +52,11 @@ export function Header() {
               <div key={link.href} className="relative">
                 <button
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="flex items-center gap-1.5 text-white hover:text-pk-orange transition-colors duration-200 text-[16px] font-normal bg-transparent border-none cursor-pointer"
+                  className="flex items-center gap-2 text-white hover:text-pk-orange transition-colors duration-200 text-[16px] font-normal bg-transparent border-none cursor-pointer group"
                 >
                   {link.label}
                   <ChevronDown
-                    className={`w-4 h-4 transition-transform duration-200 ${
+                    className={`w-[18px] h-[18px] transition-transform duration-200 ${
                       isDropdownOpen ? "rotate-180" : ""
                     }`}
                   />
