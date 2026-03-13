@@ -20,11 +20,18 @@ export function CoreTeam() {
                   fill
                   className="object-cover"
                 />
-                <div className="absolute bottom-3 right-3 w-7 h-7 bg-white flex items-center justify-center">
-                  <span className="text-navy text-[11px] font-semibold">
-                    in
-                  </span>
-                </div>
+                {member.linkedIn && (
+                  <a
+                    href={member.linkedIn}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute bottom-3 right-3 w-7 h-7 bg-white flex items-center justify-center hover:bg-gray-100 transition-colors"
+                  >
+                    <span className="text-navy text-[11px] font-semibold">
+                      in
+                    </span>
+                  </a>
+                )}
               </div>
 
               <h4 className="font-semibold text-navy text-[18px] md:text-[19px] leading-[1.3] mb-1.5">

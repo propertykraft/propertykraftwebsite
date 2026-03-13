@@ -19,7 +19,7 @@ export const jsonLd: WithContext<Organization> = {
     postalCode: "100001",
     addressCountry: "NG",
   },
-  telephone: "+234 816 549 0072",
+  telephone: "+234 803 632 2847",
   email: "hello@propertykraft.africa",
   areaServed: {
     "@type": "Place",
@@ -34,7 +34,7 @@ export const jsonLd: WithContext<Organization> = {
   contactPoint: [
     {
       "@type": "ContactPoint",
-      telephone: "+234 816 549 0072",
+      telephone: "+234 803 632 2847",
       contactType: "customer service",
       email: "hello@propertykraft.africa",
       availableLanguage: "English",
