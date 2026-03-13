@@ -176,5 +176,7 @@ export const seoMetadata: Metadata = {
     "DC.language": "en",
     "DC.coverage": "Lagos",
     "DC.rights": "Copyright © 2025 Property Kraft Africa. All rights reserved.",
+
+    "facebook-domain-verification": "0m59v8ru31aw4mk8srbkrfx3f7tej2",
   },
 };
