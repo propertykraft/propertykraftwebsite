@@ -23,7 +23,7 @@ export default function RentAdministrationPage() {
       title="Rent Administration"
       subtitle="Efficient rent collection, payment tracking, and financial administration that ensures timely cash flow and accurate records."
       customHero={
-        <div className="bg-[#0f172a] relative w-full overflow-hidden min-h-[600px] flex items-center">
+        <div className="bg-[#0f172a] relative w-full overflow-hidden flex items-center">
           {/* Subtle Abstract Flowing Lines */}
           <div className="absolute inset-0 opacity-[0.06]">
             <svg
@@ -65,7 +65,7 @@ export default function RentAdministrationPage() {
             </svg>
           </div>
 
-          <div className="relative w-full px-[16px] md:px-[32px] py-[70px] md:py-[85px] z-10">
+          <div className="relative w-full px-[16px] md:px-[32px] pt-[50px] pb-[60px] md:pt-[70px] md:pb-[80px] z-10">
             <div className="max-w-[1200px] mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-[48px] md:gap-[64px] items-center">
                 {/* Left Column - Content */}
@@ -108,7 +108,7 @@ export default function RentAdministrationPage() {
       capabilities={{
         title: "End-to-End Rent Oversight",
         description:
-          "Property Kraft manages the full rent administration process — from issuing rent invoices and tracking payments to handling late payment follow-ups and maintaining clear financial records.",
+          "Property Kraft manages the full rent administration process — from issuing rent invoices and tracking payments to handling late payment follow-ups and maintaining clear financial records. This ensures consistency, transparency, and reliable financial oversight for property owners.",
         stages: [
           {
             title: "Invoice Generation & Distribution",
@@ -125,19 +125,34 @@ export default function RentAdministrationPage() {
           {
             title: "Escalation & Adjustments",
             items: [
-              "We manage late payment follow-ups, negotiate adjustments when necessary, and document all actions transparently for owners.",
+              "We handle late payment follow-ups and manage rent adjustments or exceptions through structured procedures that maintain fairness and accountability.",
             ],
           },
           {
-            title: "Reconciliation & Reporting",
+            title: "Reporting & Reconciliation",
             items: [
-              "We reconcile rent data on a regular basis and generate clear financial reports with a complete picture of property income performance.",
+              "We maintain clear financial records and prepare owner statements that provide transparency into rent collections and outstanding balances.",
             ],
           },
         ],
       }}
-      ctaTitle="Take Control of Your Rent Administration."
-      ctaDescription="Let Property Kraft handle your rent collection, tracking, and financial reporting with structure and accountability."
+      ctaSection={
+        <>
+          <h3 className="font-semibold text-white text-[28px] md:text-[36px] leading-[1.2]">
+            Let Us Handle Your Rent Administration.
+          </h3>
+          <p className="font-normal text-white/80 text-[16px] md:text-[18px] leading-[1.6] max-w-[700px] mx-auto">
+            Property Kraft coordinates rent collection, payment tracking, and
+            financial records — ensuring consistency, transparency, and reliable
+            oversight for property owners.
+          </p>
+          <div className="flex justify-center mt-6">
+            <button className="bg-pk-orange hover:bg-pk-orange-hover transition-colors duration-200 text-white px-8 py-4 rounded-lg font-medium">
+              Schedule Consultation
+            </button>
+          </div>
+        </>
+      }
     />
   );
 }

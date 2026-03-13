@@ -20,9 +20,10 @@ export function LiztPreview() {
                 Meet Lizt — A Smarter Way to Manage Properties.
               </h2>
               <p className="font-normal leading-[1.6] opacity-80 text-[#3c403a] text-[16px] max-w-[90%]">
-                Lizt is one of our products designed to make managing tenants and
-                properties simple. It works through WhatsApp, so you can oversee
-                your property from your phone — just like sending a message.
+                Lizt is one of our products designed to make managing tenants
+                and properties simple. It works through WhatsApp, so you can
+                oversee your property from your phone — just like sending a
+                message.
               </p>
             </div>
 
@@ -31,10 +32,7 @@ export function LiztPreview() {
             {/* Benefit list */}
             <div className="flex flex-col gap-2 items-start w-full">
               {benefits.map((benefit) => (
-                <div
-                  key={benefit}
-                  className="flex gap-2.5 items-start w-full"
-                >
+                <div key={benefit} className="flex gap-2.5 items-start w-full">
                   <div className="flex items-center pt-2.5 shrink-0">
                     <div className="w-1.5 h-1.5 rounded-full bg-pk-orange" />
                   </div>
@@ -60,7 +58,7 @@ export function LiztPreview() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-3 bg-pk-orange hover:bg-pk-orange-hover transition-colors rounded-[10px] text-white font-bold text-[16px]"
             >
-              Learn More
+              Explore Lizt
             </Link>
           </div>
 

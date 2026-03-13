@@ -24,7 +24,7 @@ export default function TenantOnboardingPage() {
       subtitle="Streamlined tenant verification and onboarding that ensures compliance, security, and a smooth move-in experience."
       customHero={
         <div
-          className="relative w-full min-h-[500px] md:min-h-[600px]"
+          className="relative w-full"
           style={{ backgroundColor: "#0F172A" }}
         >
           {/* Concentric circular arcs radiating from right side */}
@@ -50,7 +50,7 @@ export default function TenantOnboardingPage() {
           />
 
           {/* Content Container */}
-          <div className="relative px-[20px] md:px-[40px] py-[80px] md:py-[120px]">
+          <div className="relative px-[20px] md:px-[40px] pt-[50px] pb-[60px] md:pt-[70px] md:pb-[85px]">
             <div className="max-w-[1200px] w-full mx-auto relative z-10">
               <div className="flex flex-col md:flex-row items-center justify-between gap-[40px]">
                 {/* Left: Text Content */}
@@ -118,37 +118,62 @@ export default function TenantOnboardingPage() {
         </div>
       }
       overview={{
-        title: "Structured Tenant Onboarding",
+        title: "Seamless Tenant Onboarding & Verification",
         description:
-          "Property Kraft manages the complete tenant onboarding process — from initial screening and document collection to KYC verification and lease execution. Our approach ensures every tenancy begins with proper documentation, verified identities, and clear mutual expectations.",
+          "Property Kraft's tenant onboarding and KYC (Know Your Customer) services facilitate the complete tenant intake process. We coordinate application processing, document collection, identity confirmation, and lease preparation. Our structured approach ensures regulatory compliance, supports property owner requirements, and creates a smooth transition for new tenants.",
       }}
       capabilities={{
-        title: "How Our Onboarding Works",
+        title: "Our Onboarding Process",
         steps: [
           {
-            title: "Application & Screening",
+            title: "Application Intake",
             description:
-              "We collect tenant applications, verify basic eligibility, and conduct initial screening to assess suitability before moving forward.",
+              "Receive and organize tenant applications along with required rental information and supporting details.",
           },
           {
-            title: "Document Collection & KYC",
+            title: "Document Collection",
             description:
-              "We gather required identity documents, employment verification, references, and other KYC documentation to ensure a complete tenant profile.",
+              "Coordinate the submission of identification documents, proof of income, and other required tenant documentation.",
           },
           {
-            title: "Verification & Approval",
+            title: "Identity Verification",
             description:
-              "We verify all submitted documents, conduct background checks where applicable, and compile a comprehensive report for the property owner's review.",
+              "Review and verify tenant identity and documentation to confirm authenticity and eligibility.",
           },
           {
-            title: "Lease Execution & Move-In",
+            title: "KYC Compliance Review",
             description:
-              "Once approved, we coordinate lease signing, collect initial payments, conduct property handover inspections, and manage a structured move-in process.",
+              "Conduct Know Your Customer (KYC) checks to ensure compliance with regulatory and property management requirements.",
+          },
+          {
+            title: "Offer Letter & Lease Preparation",
+            description:
+              "Prepare tenancy documentation including offer letters and lease agreements for review and approval.",
+          },
+          {
+            title: "Onboarding Completion",
+            description:
+              "Finalize tenant records and ensure all documentation and agreements are properly completed before tenancy begins.",
           },
         ],
       }}
-      ctaTitle="Start Every Tenancy on the Right Foundation."
-      ctaDescription="Let Property Kraft handle your tenant onboarding with structured verification, documentation, and a smooth move-in experience."
+      ctaSection={
+        <>
+          <h3 className="font-semibold text-white text-[28px] md:text-[36px] leading-[1.2]">
+            Simplify Your Tenant Onboarding.
+          </h3>
+          <p className="font-normal text-white/80 text-[16px] md:text-[18px] leading-[1.6] max-w-[900px] mx-auto">
+            Property Kraft manages tenant applications, verification, KYC
+            checks, and lease preparation — ensuring every tenant is properly
+            documented before tenancy begins.
+          </p>
+          <div className="flex justify-center mt-6">
+            <button className="bg-pk-orange hover:bg-pk-orange-hover transition-colors duration-200 text-white px-8 py-4 rounded-lg font-medium">
+              Schedule Consultation
+            </button>
+          </div>
+        </>
+      }
     />
   );
 }

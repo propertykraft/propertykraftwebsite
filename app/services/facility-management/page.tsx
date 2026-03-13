@@ -24,11 +24,11 @@ export default function FacilityManagementPage() {
       subtitle="Structured facility oversight that protects infrastructure, optimizes system performance, and ensures operational continuity."
       customHero={
         <div
-          className="relative w-full h-[80vh] md:h-[90vh]"
+          className="relative w-full overflow-hidden"
           style={{ backgroundColor: "#1E293B" }}
         >
           <div
-            className="relative h-full flex items-end px-[20px] md:px-[40px] pt-[100px] md:pt-[140px] pb-[80px] md:pb-[100px]"
+            className="relative flex items-start px-[20px] md:px-[40px] pt-[60px] md:pt-[80px] pb-[60px] md:pb-[80px]"
             style={{
               backgroundImage: "url('/facility-management-hero.jpg')",
               backgroundSize: "cover",
@@ -79,20 +79,37 @@ export default function FacilityManagementPage() {
         </div>
       }
       capabilities={{
-        title: "End-to-End Facility Oversight",
+        title: "Key Responsibilities",
+        description:
+          "Our facility management team oversees the following operational responsibilities to ensure buildings remain safe, efficient, and properly maintained.",
         items: [
-          "Building systems management",
-          "Preventive maintenance scheduling",
+          "Oversight of building systems (HVAC, electrical, plumbing, and utilities)",
+          "Preventive maintenance planning and execution",
           "Vendor and contractor coordination",
-          "Safety and compliance monitoring",
-          "Energy and utility management",
-          "Emergency response planning",
-          "Cleaning and janitorial oversight",
-          "Landscape and grounds management",
+          "Janitorial and facility cleaning service management",
+          "Security operations and access control oversight",
+          "Health and safety compliance monitoring",
+          "Energy usage monitoring and utility optimization",
+          "Emergency preparedness and response coordination",
         ],
       }}
-      ctaTitle="Keep Your Facility Running at Its Best."
-      ctaDescription="From mechanical systems to vendor management and compliance, Property Kraft handles your facility operations with precision and accountability."
+      ctaSection={
+        <>
+          <h3 className="font-semibold text-white text-[28px] md:text-[36px] leading-[1.2]">
+            Let Us Handle Your Facility Operations.
+          </h3>
+          <p className="font-normal text-white/80 text-[16px] md:text-[18px] leading-[1.6] max-w-[700px] mx-auto">
+            Property Kraft oversees maintenance, vendor coordination,
+            compliance, and daily facility operations — so your buildings remain
+            safe, efficient, and professionally maintained.
+          </p>
+          <div className="flex justify-center mt-6">
+            <button className="bg-pk-orange hover:bg-pk-orange-hover transition-colors duration-200 text-white px-8 py-4 rounded-lg font-medium">
+              Schedule Consultation
+            </button>
+          </div>
+        </>
+      }
     />
   );
 }
