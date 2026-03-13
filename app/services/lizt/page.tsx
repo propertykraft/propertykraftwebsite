@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { BASE_URL } from "@/lib/constants";
 import { createCanonicalMetadata } from "@/lib/seo";
 import ServicePageTemplate from "@/components/service-page-template";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Lizt — Smart WhatsApp Management - Property Kraft Africa",
@@ -23,7 +24,7 @@ export default function LiztPage() {
       title="Lizt — Powered by Property Kraft"
       subtitle="Manage your property, tenants, and rent directly through WhatsApp. Lizt keeps everything organized while giving you a simple dashboard to track records and activities."
       customHero={
-        <div className="relative w-full min-h-[450px] md:min-h-[550px]" style={{ backgroundColor: "#0F172A" }}>
+        <div className="relative w-full" style={{ backgroundColor: "#0F172A" }}>
           {/* Subtle curved communication lines */}
           <svg
             className="absolute inset-0 w-full h-full pointer-events-none"
@@ -48,7 +49,7 @@ export default function LiztPage() {
           />
 
           {/* Content Container */}
-          <div className="relative px-[20px] md:px-[40px] py-[60px] md:py-[100px]">
+          <div className="relative px-[20px] md:px-[40px] pt-[40px] pb-[50px] md:pt-[50px] md:pb-[60px]">
             <div className="max-w-[1200px] w-full mx-auto relative z-10">
               <div className="flex flex-col md:flex-row items-center justify-between gap-[40px]">
                 {/* Left: Text Content */}
@@ -107,25 +108,73 @@ export default function LiztPage() {
         </div>
       }
       overview={{
-        title: "WhatsApp-Powered Property Management",
+        title: "Technology Supporting Property Operations",
         description:
-          "Lizt is a WhatsApp-based property management tool built by Property Kraft. It allows landlords and property managers to handle tenant communication, rent tracking, maintenance requests, and daily operations directly through WhatsApp — with a companion dashboard that keeps everything documented and organized.",
+          "Lizt is a WhatsApp-based tool designed to simplify day-to-day property communication.\n\nLandlords, tenants, and facility teams can send requests, receive updates, get rent reminders, and handle common property tasks directly through WhatsApp.\n\nBehind the scenes, Lizt keeps records organized and provides a simple dashboard so property managers can track activities and maintain clear documentation.",
       }}
-      capabilities={{
-        title: "What Lizt Does",
-        items: [
-          "Tenant communication via WhatsApp",
-          "Automated rent reminders and tracking",
-          "Maintenance request management",
-          "Document collection and storage",
-          "Payment status monitoring",
-          "Activity logs and reporting dashboard",
-          "Multi-property support",
-          "Team collaboration tools",
-        ],
-      }}
-      ctaTitle="Try Lizt for Your Properties."
-      ctaDescription="Simplify your property management with WhatsApp-powered tools that keep everything organized and documented."
+      capabilitiesCustom={
+        <div className="flex flex-col gap-[0px] pt-[88px] md:pt-[96px]">
+          <div className="flex flex-col gap-[16px]">
+            <h2 className="font-semibold text-pk-text text-[36px] md:text-[48px] leading-[1.2]">
+              Platform Capabilities
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[32px] gap-y-[20px] mt-[24px] max-w-[1000px]">
+            <CapabilityItem text="Automatic responses to common tenant questions" />
+            <CapabilityItem text="Rent reminders and payment confirmations" />
+            <CapabilityItem text="Tenant document collection and verification through chat" />
+            <CapabilityItem text="Urgent issue escalation and emergency request routing" />
+            <CapabilityItem text="Maintenance and service request reporting via WhatsApp" />
+            <CapabilityItem text="Broadcast announcements and updates to tenants" />
+          </div>
+        </div>
+      }
+      ctaSection={
+        <>
+          <h3 className="font-semibold text-white text-[28px] md:text-[36px] leading-[1.2]">
+            See How Lizt Works for Your Property
+          </h3>
+          <p className="font-normal text-white/80 text-[16px] md:text-[18px] leading-[1.6] max-w-[700px] mx-auto">
+            Lizt helps landlords manage tenants, requests, and rent updates
+            directly through WhatsApp while keeping everything organized in a
+            simple dashboard.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-[12px] justify-center mt-[16px]">
+            <button className="bg-[#FF5000] hover:bg-[#ff6a00] transition-colors duration-200 text-white px-[32px] py-[14px] rounded-[8px] font-medium text-[16px]">
+              Request Demo
+            </button>
+            <Link
+              href="https://lizt.co"
+              target="_blank"
+              className="border-2 border-white text-white hover:bg-white/10 transition-colors duration-200 px-[32px] py-[14px] rounded-[8px] font-medium text-[16px] inline-block"
+            >
+              Learn More
+            </Link>
+          </div>
+        </>
+      }
     />
+  );
+}
+
+function CapabilityItem({ text }: { text: string }) {
+  return (
+    <div className="flex gap-[14px] items-start">
+      <div className="w-[20px] h-[20px] rounded-full bg-[#FF5000] flex items-center justify-center shrink-0 mt-[3px]">
+        <svg
+          className="w-[12px] h-[12px]"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="white"
+          strokeWidth="3"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+      <p className="font-normal text-pk-text-light text-[15px] md:text-[16px] leading-[1.6]">
+        {text}
+      </p>
+    </div>
   );
 }

@@ -24,11 +24,11 @@ export default function PropertyManagementPage() {
       subtitle="Reliable property management including tenant coordination, rent administration, inspections, and daily operational oversight."
       customHero={
         <div
-          className="relative w-full h-[80vh] md:h-[90vh]"
+          className="relative w-full overflow-hidden"
           style={{ backgroundColor: "#1E293B" }}
         >
           <div
-            className="relative h-full flex items-end px-[20px] md:px-[40px] pt-[100px] md:pt-[140px] pb-[80px] md:pb-[100px]"
+            className="relative flex items-start px-[20px] md:px-[40px] pt-[60px] md:pt-[80px] pb-[60px] md:pb-[80px]"
             style={{
               backgroundImage: "url('/property-management-hero.jpg')",
               backgroundSize: "cover",
@@ -68,35 +68,53 @@ export default function PropertyManagementPage() {
             <div className="flex flex-col gap-6">
               <ServiceBlock
                 title="Tenant Management"
-                description="We oversee tenant screening, onboarding, documentation, renewals, and structured communication to ensure clear expectations and accountability."
+                description="We oversee tenant screening, onboarding, documentation, renewals, and structured communication to ensure clear expectations and accountability from the start of tenancy to renewal."
+                icon={
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                  />
+                }
               />
               <ServiceBlock
                 title="Rent Administration"
                 description="We coordinate rent collection, monitor payments, issue reminders, and maintain accurate financial records to ensure consistency and transparency."
+                icon={
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
+                  />
+                }
               />
               <ServiceBlock
                 title="Property Inspections"
                 description="We conduct routine inspections, oversee compliance requirements, and document property conditions to protect your assets and maintain operational standards."
+                icon={
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                  />
+                }
               />
             </div>
           </div>
         </div>
       }
-      capabilities={{
-        title: "Core Capabilities",
-        items: [
-          "Tenant screening and onboarding",
-          "Lease documentation and renewals",
-          "Rent collection and tracking",
-          "Property inspections and audits",
-          "Maintenance coordination",
-          "Compliance oversight",
-          "Vendor management",
-          "Financial reporting",
-        ],
-      }}
-      ctaTitle="Let's Take the Responsibility Off Your Hands."
-      ctaDescription="From tenant management to rent coordination and inspections, Property Kraft handles your property operations with structure and accountability."
+      ctaSection={
+        <>
+          <h2 className="font-['DM_Sans:Medium',sans-serif] font-medium text-white text-[24px] md:text-[28px] leading-[1.3]">
+            Let&apos;s Take the Responsibility Off Your Hands.
+          </h2>
+          <p className="font-['DM_Sans',sans-serif] font-normal text-white/85 text-[16px] md:text-[18px] leading-[1.6] max-w-[600px] mx-auto">
+            From tenant management to rent coordination and inspections,
+            Property Kraft handles your property operations with structure and
+            accountability.
+          </p>
+        </>
+      }
     />
   );
 }
@@ -104,9 +122,11 @@ export default function PropertyManagementPage() {
 function ServiceBlock({
   title,
   description,
+  icon,
 }: {
   title: string;
   description: string;
+  icon: React.ReactNode;
 }) {
   return (
     <div className="flex gap-4 items-start">
@@ -118,11 +138,7 @@ function ServiceBlock({
           stroke="#FF5000"
           strokeWidth="2"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M5 13l4 4L19 7"
-          />
+          {icon}
         </svg>
       </div>
       <div>

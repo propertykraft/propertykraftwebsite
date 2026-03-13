@@ -20,7 +20,7 @@ export async function POST(request: Request) {
       replyTo: email,
       subject: `[Contact Form] ${subject}`,
       html: `
-        <h2>New Contact Form Submission</h2>
+        <h2>New Contact Form Submission on website</h2>
         <p><strong>Name:</strong> ${fullName}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Company:</strong> ${company || "N/A"}</p>

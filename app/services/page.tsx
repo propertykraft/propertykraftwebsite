@@ -62,7 +62,7 @@ export default function ServicesPage() {
               "radial-gradient(ellipse 1200px 1100px at 30% 15%, rgba(255, 255, 255, 0.07) 0%, rgba(15, 23, 42, 0) 70%)",
           }}
         />
-        <div className="relative z-[2] flex flex-col items-center pt-[140px] md:pt-[180px] pb-[80px] md:pb-[120px] px-4 md:px-8">
+        <div className="relative z-[2] flex flex-col items-center pt-[80px] md:pt-[100px] pb-[60px] md:pb-[80px] px-4 md:px-8">
           <div className="max-w-[900px] text-center flex flex-col items-center gap-6">
             <h1 className="font-semibold text-white text-[42px] md:text-[56px] lg:text-[68px] leading-[1.1]">
               Our Services
@@ -75,14 +75,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Gradient transition */}
-      <div
-        className="w-full h-[200px] md:h-[280px]"
-        style={{
-          background:
-            "linear-gradient(to bottom, #0F172A 0%, rgba(15, 23, 42, 0.95) 20%, rgba(15, 23, 42, 0.8) 35%, rgba(15, 23, 42, 0.5) 50%, rgba(15, 23, 42, 0.25) 65%, rgba(15, 23, 42, 0.1) 80%, rgba(15, 23, 42, 0.03) 92%, rgba(255, 255, 255, 0) 100%)",
-        }}
-      />
+
 
       {/* Services Grid */}
       <section className="max-w-[1200px] mx-auto px-4 md:px-8 py-16 md:py-28">
