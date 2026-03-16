@@ -141,9 +141,12 @@ export default function LiztPage() {
             simple dashboard.
           </p>
           <div className="flex flex-col sm:flex-row gap-[12px] justify-center mt-[16px]">
-            <button className="bg-[#FF5000] hover:bg-[#ff6a00] transition-colors duration-200 text-white px-[32px] py-[14px] rounded-[8px] font-medium text-[16px]">
+            <Link
+              href="/contact"
+              className="bg-[#FF5000] hover:bg-[#ff6a00] transition-colors duration-200 text-white px-[32px] py-[14px] rounded-[8px] font-medium text-[16px] inline-block"
+            >
               Request Demo
-            </button>
+            </Link>
             <Link
               href="https://lizt.co"
               target="_blank"

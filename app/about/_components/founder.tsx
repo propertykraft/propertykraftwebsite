@@ -12,7 +12,7 @@ export function Leadership() {
             <p className="font-normal text-navy/50 text-[13px] uppercase tracking-[0.15em] mb-4">
               Our Team
             </p>
-            <h2 className="font-serif text-navy text-[42px] md:text-[48px] leading-[1.1] mb-6">
+            <h2 className="font-normal text-navy text-[42px] md:text-[48px] leading-[1.1] mb-6">
               Leadership
             </h2>
             <p className="font-normal text-navy/70 text-[15px] md:text-[16px] leading-[1.7]">
