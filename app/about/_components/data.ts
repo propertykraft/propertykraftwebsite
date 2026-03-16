@@ -33,7 +33,7 @@ export const teamMembers = [
     role: "Operations",
     bio: "Collins is a results-driven operations professional with over four years of experience in facility management and day-to-day operational oversight. He specializes in streamlining processes, improving efficiency, and ensuring seamless service delivery across properties. At Property Kraft, Collins plays a key role in maintaining operational excellence and delivering on our promise of reliability and speed.",
     imgUrl: "/team-collins.jpeg",
-    linkedIn: "",
+    linkedIn: "https://www.linkedin.com/in/collins-ishioku-50a6b4195/",
   },
   {
     name: "Sonia Akpati",

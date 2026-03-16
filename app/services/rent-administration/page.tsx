@@ -65,9 +65,9 @@ export default function RentAdministrationPage() {
             </svg>
           </div>
 
-          <div className="relative w-full px-[16px] md:px-[32px] pt-[50px] pb-[60px] md:pt-[70px] md:pb-[80px] z-10">
+          <div className="relative w-full px-[16px] md:px-[32px] pt-[20px] pb-[40px] md:pt-[24px] md:pb-[60px] z-10">
             <div className="max-w-[1200px] mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-[48px] md:gap-[64px] items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
                 {/* Left Column - Content */}
                 <div className="flex flex-col gap-[18px]">
                   <h1 className="font-semibold text-white text-[28px] md:text-[34px] lg:text-[38px] leading-[1.1] max-w-[580px]">
@@ -82,7 +82,7 @@ export default function RentAdministrationPage() {
 
                 {/* Right Column - Corporate Image */}
                 <div className="flex items-center justify-center lg:justify-end">
-                  <div className="w-full max-w-[500px] relative">
+                  <div className="w-full max-w-[450px] relative">
                     <div className="rounded-[12px] overflow-hidden shadow-2xl">
                       <img
                         src="/rent-administration.jpeg"

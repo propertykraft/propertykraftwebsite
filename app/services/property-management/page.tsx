@@ -103,18 +103,8 @@ export default function PropertyManagementPage() {
           </div>
         </div>
       }
-      ctaSection={
-        <>
-          <h2 className="font-['DM_Sans:Medium',sans-serif] font-medium text-white text-[24px] md:text-[28px] leading-[1.3]">
-            Let&apos;s Take the Responsibility Off Your Hands.
-          </h2>
-          <p className="font-['DM_Sans',sans-serif] font-normal text-white/85 text-[16px] md:text-[18px] leading-[1.6] max-w-[600px] mx-auto">
-            From tenant management to rent coordination and inspections,
-            Property Kraft handles your property operations with structure and
-            accountability.
-          </p>
-        </>
-      }
+      ctaTitle="Let's Take the Responsibility Off Your Hands."
+      ctaDescription="From tenant management to rent coordination and inspections, Property Kraft handles your property operations with structure and accountability."
     />
   );
 }
