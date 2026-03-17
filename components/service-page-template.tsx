@@ -67,12 +67,12 @@ export default function ServicePageTemplate({
             }}
           />
 
-          <div className="relative z-[2] flex flex-col items-center pt-[60px] md:pt-[80px] pb-[60px] md:pb-[80px] px-4 md:px-8 w-full">
+          <div className="relative z-[2] flex flex-col items-center pt-[48px] md:pt-[80px] pb-[48px] md:pb-[80px] px-4 md:px-8 w-full">
             <div className="max-w-[1000px] flex flex-col items-center gap-6 text-center">
-              <h1 className="font-semibold text-white text-[42px] md:text-[56px] lg:text-[68px] leading-[1.1]">
+              <h1 className="font-semibold text-white text-[32px] md:text-[56px] lg:text-[68px] leading-[1.1]">
                 {title}
               </h1>
-              <p className="font-normal text-[#e2e8f0] text-[18px] md:text-[22px] leading-[1.6] max-w-[800px]">
+              <p className="font-normal text-[#e2e8f0] text-[15px] md:text-[22px] leading-[1.6] max-w-[800px]">
                 {subtitle}
               </p>
             </div>
@@ -96,15 +96,15 @@ export default function ServicePageTemplate({
 
       {/* Content Sections */}
       <div className="bg-white w-full">
-        <div className="flex flex-col px-5 md:px-10 py-[60px] md:py-[100px] w-full">
+        <div className="flex flex-col px-5 md:px-10 py-[40px] md:py-[100px] w-full">
           <div className="max-w-[1200px] w-full mx-auto flex flex-col gap-20 md:gap-[120px]">
             {/* Overview Section */}
             {overview && (
               <div className="flex flex-col gap-6">
-                <h2 className="font-semibold text-pk-text text-[36px] md:text-[48px] leading-[1.2]">
+                <h2 className="font-semibold text-pk-text text-[28px] md:text-[48px] leading-[1.2]">
                   {overview.title}
                 </h2>
-                <p className="font-normal text-pk-text-light text-[18px] md:text-[20px] leading-[1.7]">
+                <p className="font-normal text-pk-text-light text-[15px] md:text-[20px] leading-[1.7]">
                   {overview.description}
                 </p>
               </div>
@@ -118,7 +118,7 @@ export default function ServicePageTemplate({
               ) : (
                 <div className="flex flex-col gap-0 pt-[88px] md:pt-[96px]">
                   <div className="flex flex-col gap-4">
-                    <h2 className="font-semibold text-pk-text text-[36px] md:text-[48px] leading-[1.2]">
+                    <h2 className="font-semibold text-pk-text text-[28px] md:text-[48px] leading-[1.2]">
                       {capabilities?.title}
                     </h2>
                     {capabilities?.description && (
@@ -218,11 +218,11 @@ export default function ServicePageTemplate({
             {/* Benefits Section */}
             {benefits && (
               <div className="flex flex-col gap-6">
-                <h2 className="font-semibold text-pk-text text-[36px] md:text-[48px] leading-[1.2]">
+                <h2 className="font-semibold text-pk-text text-[28px] md:text-[48px] leading-[1.2]">
                   {benefits.title}
                 </h2>
                 {benefits.description && (
-                  <p className="font-normal text-pk-text-light text-[18px] md:text-[20px] leading-[1.7]">
+                  <p className="font-normal text-pk-text-light text-[15px] md:text-[20px] leading-[1.7]">
                     {benefits.description}
                   </p>
                 )}
@@ -269,13 +269,13 @@ export default function ServicePageTemplate({
 
       {/* CTA Section */}
       <div className="bg-navy w-full mb-[40px] md:mb-[60px]">
-        <div className="flex flex-col items-center px-4 md:px-8 py-[60px] md:py-[80px] text-center">
+        <div className="flex flex-col items-center px-4 md:px-8 py-[40px] md:py-[80px] text-center">
           <div className="max-w-[1200px] w-full flex flex-col gap-5 items-center">
             {ctaSection ? (
               ctaSection
             ) : (
               <>
-                <h2 className="font-medium text-white text-[24px] md:text-[28px] leading-[1.3]">
+                <h2 className="font-medium text-white text-[20px] md:text-[28px] leading-[1.3]">
                   {ctaTitle}
                 </h2>
                 {ctaDescription && (

@@ -32,7 +32,7 @@ export function ServicesPreview() {
             <p className="font-medium leading-[1.32] text-pk-orange text-[16px] tracking-[1px] uppercase">
               Solutions
             </p>
-            <h2 className="font-semibold leading-[1.15] text-[#141513] text-[32px] md:text-[48px]">
+            <h2 className="font-semibold leading-[1.15] text-[#141513] text-[26px] md:text-[48px]">
               Complete Oversight for Your Properties.
             </h2>
           </div>

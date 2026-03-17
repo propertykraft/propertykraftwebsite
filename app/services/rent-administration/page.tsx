@@ -73,7 +73,7 @@ export default function RentAdministrationPage() {
                   <h1 className="font-semibold text-white text-[28px] md:text-[34px] lg:text-[38px] leading-[1.1] max-w-[580px]">
                     Reliable Rent Administration, Handled for You.
                   </h1>
-                  <p className="font-normal text-[#cbd5e1] text-[17px] md:text-[18px] leading-[1.6] max-w-[520px]">
+                  <p className="font-normal text-[#cbd5e1] text-[15px] md:text-[18px] leading-[1.6] max-w-[520px]">
                     Property Kraft manages rent collection, payment tracking,
                     and financial records to ensure consistency, transparency,
                     and clear financial oversight for property owners.
@@ -138,7 +138,7 @@ export default function RentAdministrationPage() {
       }}
       ctaSection={
         <>
-          <h3 className="font-semibold text-white text-[28px] md:text-[36px] leading-[1.2]">
+          <h3 className="font-semibold text-white text-[22px] md:text-[36px] leading-[1.2]">
             Let Us Handle Your Rent Administration.
           </h3>
           <p className="font-normal text-white/80 text-[16px] md:text-[18px] leading-[1.6] max-w-[700px] mx-auto">
@@ -147,7 +147,7 @@ export default function RentAdministrationPage() {
             oversight for property owners.
           </p>
           <div className="flex justify-center mt-6">
-            <button className="bg-pk-orange hover:bg-pk-orange-hover transition-colors duration-200 text-white px-8 py-4 rounded-lg font-medium">
+            <button className="bg-pk-orange hover:bg-pk-orange-hover transition-colors duration-200 text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-medium text-[15px] md:text-[16px]">
               Schedule Consultation
             </button>
           </div>

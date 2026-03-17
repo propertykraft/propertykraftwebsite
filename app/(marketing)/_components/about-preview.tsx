@@ -54,7 +54,7 @@ export function AboutPreview() {
                         data-name="Heading wrapper"
                       >
                         <p
-                          className="flex-[1_0_0] font-sans font-semibold leading-[1.16] min-h-px min-w-px relative text-[#141513] text-[32px] md:text-[48px] whitespace-pre-wrap"
+                          className="flex-[1_0_0] font-sans font-semibold leading-[1.16] min-h-px min-w-px relative text-[#141513] text-[26px] md:text-[48px] whitespace-pre-wrap"
                           style={{ fontVariationSettings: "'opsz' 14" }}
                         >
                           Designed for Better Property Operations.
@@ -66,7 +66,7 @@ export function AboutPreview() {
               </div>
 
               {/* Body text */}
-              <div className="font-sans font-light leading-[1.6] not-italic relative shrink-0 text-[#51564e] text-[16px] md:text-[20px] w-full whitespace-pre-wrap">
+              <div className="font-sans font-light leading-[1.6] not-italic relative shrink-0 text-[#51564e] text-[15px] md:text-[20px] w-full whitespace-pre-wrap">
                 <p className="mb-[18px]">Property Kraft is a property and facility management company helping landlords, estates, and organizations manage properties with structure and clarity.</p>
                 <p className="mb-[18px]">From tenant management and rent administration to facility operations and maintenance coordination, we provide the systems and operational support needed to keep properties running efficiently.</p>
                 <p>Our approach combines experienced management with smart technology, giving property owners better visibility, faster response times, and reliable day-to-day operations across their assets.</p>

@@ -66,11 +66,11 @@ function ContentWrapper() {
   return (
     <div className="flex flex-col gap-9 items-start flex-1 md:min-w-[360px]">
       <div className="flex flex-col gap-10 items-start w-full">
-        <p className="font-medium leading-[1.08] text-white text-[32px] md:text-[48px] whitespace-pre-wrap -mb-4">
+        <p className="font-medium leading-[1.08] text-white text-[26px] md:text-[48px] whitespace-pre-wrap -mb-4">
           Complete Property and Facility Management You Can Rely On.
         </p>
         <div className="w-full max-w-[580px]">
-          <p className="font-normal leading-[1.6] opacity-80 text-white text-[16px] md:text-[20px] whitespace-pre-wrap">
+          <p className="font-normal leading-[1.6] opacity-80 text-white text-[15px] md:text-[20px] whitespace-pre-wrap">
             We manage your properties, tenants, facilities, and daily operations
             with structured systems designed for clarity, accountability, and
             long-term stability.

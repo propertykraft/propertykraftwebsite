@@ -56,11 +56,11 @@ export default function PropertyManagementPage() {
       }
       overviewCustom={
         <div className="flex flex-col gap-6">
-          <h2 className="font-semibold text-pk-text text-[28px] md:text-[36px] leading-[1.2]">
+          <h2 className="font-semibold text-pk-text text-[24px] md:text-[36px] leading-[1.2]">
             What We Handle For You
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[60px] md:gap-[100px] lg:gap-[120px] mt-5">
-            <p className="font-normal text-pk-text-light text-[18px] md:text-[20px] leading-[1.7]">
+            <p className="font-normal text-pk-text-light text-[15px] md:text-[20px] leading-[1.7]">
               Property Kraft manages the day-to-day operational responsibilities
               required to keep your properties structured, compliant, and
               running smoothly — so you don&apos;t have to manage them yourself.

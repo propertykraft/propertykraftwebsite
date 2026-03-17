@@ -4,7 +4,7 @@ import { founder } from "./data";
 
 export function Leadership() {
   return (
-    <section className="relative w-full bg-white pt-[140px] pb-[80px]">
+    <section className="relative w-full bg-white pt-[100px] md:pt-[140px] pb-[80px]">
       <div className="max-w-[1200px] w-full mx-auto px-5 md:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-[35%_65%] gap-[60px] lg:gap-[80px]">
           {/* Left Column */}
@@ -12,7 +12,7 @@ export function Leadership() {
             <p className="font-normal text-navy/50 text-[13px] uppercase tracking-[0.15em] mb-4">
               Our Team
             </p>
-            <h2 className="font-normal text-navy text-[42px] md:text-[48px] leading-[1.1] mb-6">
+            <h2 className="font-normal text-navy text-[32px] md:text-[48px] leading-[1.1] mb-6">
               Leadership
             </h2>
             <p className="font-normal text-navy/70 text-[15px] md:text-[16px] leading-[1.7]">
