@@ -16,7 +16,7 @@ export function LiztPreview() {
           {/* Left: Text Content */}
           <div className="flex-1 min-w-0 md:min-w-[340px]">
             <div className="flex flex-col gap-6 items-start w-full">
-              <h2 className="font-semibold leading-[1.16] text-[#141513] text-[32px] md:text-[39px]">
+              <h2 className="font-semibold leading-[1.16] text-[#141513] text-[26px] md:text-[39px]">
                 Meet Lizt — A Smarter Way to Manage Properties.
               </h2>
               <p className="font-normal leading-[1.6] opacity-80 text-[#3c403a] text-[16px] max-w-[90%]">
@@ -76,8 +76,8 @@ export function LiztPreview() {
               </div>
 
               {/* WhatsApp message bubble overlay */}
-              <div className="absolute bottom-0 left-0 bg-white rounded-[26px] p-3.5 border border-white shadow-lg">
-                <div className="w-[310px]">
+              <div className="absolute bottom-0 left-0 bg-white rounded-[26px] p-3.5 border border-white shadow-lg max-w-[calc(100%-16px)]">
+                <div className="w-[310px] max-w-full">
                   <div className="flex items-start gap-1.5">
                     <div className="w-7 h-7 shrink-0 relative">
                       {/* placeholder: lizt-icon.png */}

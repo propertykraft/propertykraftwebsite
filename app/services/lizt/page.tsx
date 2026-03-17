@@ -58,7 +58,7 @@ export default function LiztPage() {
                     <p className="font-normal text-white/70 text-[14px] uppercase tracking-[1.2px]">
                       Powered by Property Kraft
                     </p>
-                    <h1 className="font-medium text-white text-[36px] md:text-[44px] lg:text-[48px] leading-[1.15]">
+                    <h1 className="font-medium text-white text-[26px] md:text-[44px] lg:text-[48px] leading-[1.15]">
                       Lizt by Property Kraft
                     </h1>
                   </div>
@@ -69,8 +69,8 @@ export default function LiztPage() {
                   </p>
                 </div>
 
-                {/* Right: WhatsApp Circular Graphic */}
-                <div className="relative w-[320px] h-[320px] flex-shrink-0 flex items-center justify-center">
+                {/* Right: WhatsApp Circular Graphic — hidden on mobile */}
+                <div className="relative w-[320px] h-[320px] flex-shrink-0 hidden md:flex items-center justify-center">
                   {/* Outer glow ring */}
                   <div
                     className="absolute w-[240px] h-[240px] rounded-full"
@@ -115,7 +115,7 @@ export default function LiztPage() {
       capabilitiesCustom={
         <div className="flex flex-col gap-[0px] pt-[88px] md:pt-[96px]">
           <div className="flex flex-col gap-[16px]">
-            <h2 className="font-semibold text-pk-text text-[36px] md:text-[48px] leading-[1.2]">
+            <h2 className="font-semibold text-pk-text text-[28px] md:text-[48px] leading-[1.2]">
               Platform Capabilities
             </h2>
           </div>
@@ -132,7 +132,7 @@ export default function LiztPage() {
       }
       ctaSection={
         <>
-          <h3 className="font-semibold text-white text-[28px] md:text-[36px] leading-[1.2]">
+          <h3 className="font-semibold text-white text-[24px] md:text-[36px] leading-[1.2]">
             See How Lizt Works for Your Property
           </h3>
           <p className="font-normal text-white/80 text-[16px] md:text-[18px] leading-[1.6] max-w-[700px] mx-auto">
@@ -140,17 +140,17 @@ export default function LiztPage() {
             directly through WhatsApp while keeping everything organized in a
             simple dashboard.
           </p>
-          <div className="flex flex-col sm:flex-row gap-[12px] justify-center mt-[16px]">
+          <div className="flex flex-row gap-[10px] justify-center mt-[16px]">
             <Link
               href="/contact"
-              className="bg-[#FF5000] hover:bg-[#ff6a00] transition-colors duration-200 text-white px-[32px] py-[14px] rounded-[8px] font-medium text-[16px] inline-block"
+              className="bg-[#FF5000] hover:bg-[#ff6a00] transition-colors duration-200 text-white px-[20px] py-[12px] md:px-[32px] md:py-[14px] rounded-[8px] font-medium text-[14px] md:text-[16px] inline-block text-center"
             >
               Request Demo
             </Link>
             <Link
               href="https://lizt.co"
               target="_blank"
-              className="border-2 border-white text-white hover:bg-white/10 transition-colors duration-200 px-[32px] py-[14px] rounded-[8px] font-medium text-[16px] inline-block"
+              className="border-2 border-white text-white hover:bg-white/10 transition-colors duration-200 px-[20px] py-[12px] md:px-[32px] md:py-[14px] rounded-[8px] font-medium text-[14px] md:text-[16px] inline-block text-center"
             >
               Learn More
             </Link>

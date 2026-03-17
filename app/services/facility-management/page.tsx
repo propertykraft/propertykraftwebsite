@@ -40,7 +40,7 @@ export default function FacilityManagementPage() {
 
             <div className="max-w-[1200px] w-full mx-auto relative z-10">
               <div className="flex flex-col gap-[16px] max-w-[700px]">
-                <h1 className="font-semibold text-white text-[36px] md:text-[48px] leading-[1.15]">
+                <h1 className="font-semibold text-white text-[26px] md:text-[48px] leading-[1.15]">
                   Facility Management You Can Rely On.
                 </h1>
                 <p className="font-normal text-white/90 text-[16px] md:text-[18px] leading-[1.5]">
@@ -55,7 +55,7 @@ export default function FacilityManagementPage() {
       }
       overviewCustom={
         <div className="flex flex-col gap-6 items-start">
-          <h2 className="font-semibold text-pk-text text-[36px] md:text-[48px] leading-[1.2]">
+          <h2 className="font-semibold text-pk-text text-[24px] md:text-[48px] leading-[1.2]">
             Infrastructure & Facility Oversight
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-3">
@@ -95,7 +95,7 @@ export default function FacilityManagementPage() {
       }}
       ctaSection={
         <>
-          <h3 className="font-semibold text-white text-[28px] md:text-[36px] leading-[1.2]">
+          <h3 className="font-semibold text-white text-[22px] md:text-[36px] leading-[1.2]">
             Let Us Handle Your Facility Operations.
           </h3>
           <p className="font-normal text-white/80 text-[16px] md:text-[18px] leading-[1.6] max-w-[700px] mx-auto">
@@ -104,7 +104,7 @@ export default function FacilityManagementPage() {
             safe, efficient, and professionally maintained.
           </p>
           <div className="flex justify-center mt-6">
-            <button className="bg-pk-orange hover:bg-pk-orange-hover transition-colors duration-200 text-white px-8 py-4 rounded-lg font-medium">
+            <button className="bg-pk-orange hover:bg-pk-orange-hover transition-colors duration-200 text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-medium text-[15px] md:text-[16px]">
               Schedule Consultation
             </button>
           </div>

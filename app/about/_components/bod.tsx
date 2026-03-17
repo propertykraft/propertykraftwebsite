@@ -6,7 +6,7 @@ export function AdvisoryBoard() {
   return (
     <section className="relative w-full bg-white pt-[60px] pb-[120px]">
       <div className="max-w-[1200px] w-full mx-auto px-5 md:px-10">
-        <h3 className="font-normal text-navy text-[28px] md:text-[32px] leading-[1.3] mb-10">
+        <h3 className="font-normal text-navy text-[22px] md:text-[32px] leading-[1.3] mb-10">
           Advisory Board
         </h3>
 

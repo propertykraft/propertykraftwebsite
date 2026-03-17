@@ -29,7 +29,7 @@ export function FAQSection({ faqs }: FAQSectionProps) {
               <p className="font-medium leading-[1.32] text-pk-orange text-[16px] tracking-[1px] uppercase">
                 FAQ
               </p>
-              <h2 className="font-semibold leading-[1.16] text-[#141513] text-[32px] md:text-[48px]">
+              <h2 className="font-semibold leading-[1.16] text-[#141513] text-[26px] md:text-[48px]">
                 Frequently Asked Questions
               </h2>
               <p className="font-normal leading-[1.6] opacity-80 text-pk-text-light text-[16px] pr-6">
@@ -55,7 +55,7 @@ export function FAQSection({ faqs }: FAQSectionProps) {
                       onClick={() => handleToggle(index)}
                     >
                       <div className="flex-1">
-                        <p className="font-normal leading-[1.65] text-[#141513] text-[17px] md:text-[19px] transition-colors duration-200 group-hover:text-pk-orange">
+                        <p className="font-normal leading-[1.65] text-[#141513] text-[15px] md:text-[19px] transition-colors duration-200 group-hover:text-pk-orange">
                           {faq.question}
                         </p>
                       </div>
@@ -86,7 +86,7 @@ export function FAQSection({ faqs }: FAQSectionProps) {
                       }}
                     >
                       <div className="pt-5 pr-11">
-                        <p className="font-normal leading-[1.7] text-pk-text-light text-[17px]">
+                        <p className="font-normal leading-[1.7] text-pk-text-light text-[15px] md:text-[17px]">
                           {faq.answer}
                         </p>
                       </div>

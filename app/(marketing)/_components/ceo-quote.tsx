@@ -6,10 +6,10 @@ export function CtaSection() {
       <div className="flex flex-col items-center py-12 md:py-16 px-4 md:px-8">
         <div className="flex flex-col gap-8 items-center justify-center max-w-[1200px] w-full">
           <div className="flex flex-col gap-5 items-center justify-center max-w-[900px] w-full mx-auto">
-            <h2 className="font-semibold leading-[1.2] text-white text-[32px] md:text-[40px] text-center">
+            <h2 className="font-semibold leading-[1.2] text-white text-[24px] md:text-[40px] text-center">
               Let Us Manage Your Property With Confidence.
             </h2>
-            <p className="font-normal leading-[1.6] text-[#e2e8f0] text-[16px] md:text-[18px] text-center">
+            <p className="font-normal leading-[1.6] text-[#e2e8f0] text-[14px] md:text-[18px] text-center">
               From tenant onboarding to rent coordination and facility oversight,
               Property Kraft handles the details — so you don&apos;t have to.
             </p>

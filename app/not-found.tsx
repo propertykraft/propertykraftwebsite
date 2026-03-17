@@ -4,13 +4,13 @@ export default function NotFound() {
   return (
     <div className="min-h-screen bg-white flex items-center justify-center px-5">
       <div className="max-w-[600px] mx-auto text-center">
-        <h1 className="font-semibold text-pk-orange text-[120px] md:text-[160px] leading-none mb-4">
+        <h1 className="font-semibold text-pk-orange text-[80px] md:text-[160px] leading-none mb-4">
           404
         </h1>
-        <h2 className="font-semibold text-navy text-[28px] md:text-[36px] leading-[1.2] mb-4">
+        <h2 className="font-semibold text-navy text-[24px] md:text-[36px] leading-[1.2] mb-4">
           Page Not Found
         </h2>
-        <p className="font-normal text-pk-text-light text-[17px] leading-[1.6] mb-10 max-w-[480px] mx-auto">
+        <p className="font-normal text-pk-text-light text-[15px] md:text-[17px] leading-[1.6] mb-10 max-w-[480px] mx-auto">
           Sorry, we couldn&apos;t find the page you&apos;re looking for. It
           might have been moved or no longer exists.
         </p>

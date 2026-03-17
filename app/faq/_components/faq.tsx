@@ -61,7 +61,7 @@ export function FAQ() {
                     onClick={() => toggleItem(index)}
                   >
                     <div className="flex-1">
-                      <p className="font-normal leading-[1.65] text-[#141513] text-[17px] md:text-[19px] transition-colors duration-200 group-hover:text-pk-orange">
+                      <p className="font-normal leading-[1.65] text-[#141513] text-[15px] md:text-[19px] transition-colors duration-200 group-hover:text-pk-orange">
                         {faq.question}
                       </p>
                     </div>
@@ -91,7 +91,7 @@ export function FAQ() {
                     }}
                   >
                     <div className="pt-5 pr-11">
-                      <p className="font-normal leading-[1.7] text-pk-text-light text-[17px]">
+                      <p className="font-normal leading-[1.7] text-pk-text-light text-[15px] md:text-[17px]">
                         {faq.answer}
                       </p>
                     </div>

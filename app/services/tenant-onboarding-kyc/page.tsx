@@ -55,7 +55,7 @@ export default function TenantOnboardingPage() {
               <div className="flex flex-col md:flex-row items-center justify-between gap-[40px]">
                 {/* Left: Text Content */}
                 <div className="flex flex-col gap-[20px] max-w-[800px] md:max-w-[750px]">
-                  <h1 className="font-medium text-white text-[32px] md:text-[42px] lg:text-[48px] leading-[1.15]">
+                  <h1 className="font-medium text-white text-[26px] md:text-[42px] lg:text-[48px] leading-[1.15]">
                     Structured Tenant Onboarding & KYC
                   </h1>
                   <p className="font-normal text-white/90 text-[16px] md:text-[18px] leading-[1.6] max-w-[500px]">
@@ -159,7 +159,7 @@ export default function TenantOnboardingPage() {
       }}
       ctaSection={
         <>
-          <h3 className="font-semibold text-white text-[28px] md:text-[36px] leading-[1.2]">
+          <h3 className="font-semibold text-white text-[22px] md:text-[36px] leading-[1.2]">
             Simplify Your Tenant Onboarding.
           </h3>
           <p className="font-normal text-white/80 text-[16px] md:text-[18px] leading-[1.6] max-w-[900px] mx-auto">
@@ -168,7 +168,7 @@ export default function TenantOnboardingPage() {
             documented before tenancy begins.
           </p>
           <div className="flex justify-center mt-6">
-            <button className="bg-pk-orange hover:bg-pk-orange-hover transition-colors duration-200 text-white px-8 py-4 rounded-lg font-medium">
+            <button className="bg-pk-orange hover:bg-pk-orange-hover transition-colors duration-200 text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-medium text-[15px] md:text-[16px]">
               Schedule Consultation
             </button>
           </div>

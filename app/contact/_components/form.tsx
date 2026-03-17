@@ -46,7 +46,7 @@ export function ContactSection() {
         <div className="flex flex-col md:flex-row gap-10 md:gap-16">
           {/* Left Column — Contact Info */}
           <div className="w-full md:w-[40%]">
-            <h2 className="font-semibold text-navy text-[28px] md:text-[32px] leading-[1.2] mb-5">
+            <h2 className="font-semibold text-navy text-[22px] md:text-[32px] leading-[1.2] mb-5">
               Get in Touch
             </h2>
             <p className="font-normal text-navy/70 text-[16px] leading-[1.7] mb-8">
