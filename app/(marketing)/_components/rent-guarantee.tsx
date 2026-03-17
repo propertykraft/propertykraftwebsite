@@ -63,8 +63,8 @@ export function LiztPreview() {
           </div>
 
           {/* Right: Image area */}
-          <div className="flex-1 min-w-0 md:min-w-[400px] flex flex-col items-center md:items-end justify-center">
-            <div className="relative rounded-[32px] p-5 border border-white">
+          <div className="w-full md:flex-1 md:min-w-[400px] flex flex-col items-center md:items-end justify-center">
+            <div className="relative rounded-[32px] p-5 border border-white w-full md:w-auto">
               <div className="relative h-[280px] md:h-[338px] w-full md:w-[443px] overflow-hidden rounded-[20px]">
                 {/* placeholder: lizt-preview.jpg */}
                 <Image
