@@ -13,6 +13,7 @@ export function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const pathname = usePathname();
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   // Close menus on route change
   useEffect(() => {
@@ -20,12 +21,14 @@ export function Header() {
     setIsDropdownOpen(false);
   }, [pathname]);
 
-  // Close dropdown on outside click
+  // Close dropdown on outside click (desktop only)
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as Node;
       if (
         dropdownRef.current &&
-        !dropdownRef.current.contains(e.target as Node)
+        !dropdownRef.current.contains(target) &&
+        (!mobileMenuRef.current || !mobileMenuRef.current.contains(target))
       ) {
         setIsDropdownOpen(false);
       }
@@ -106,7 +109,7 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMobileOpen && (
-        <div className="md:hidden bg-navy border-t border-white/10 shadow-lg">
+        <div ref={mobileMenuRef} className="md:hidden bg-navy border-t border-white/10 shadow-lg">
           <div className="flex flex-col py-4 px-6">
             {navLinks.map((link) =>
               link.children ? (

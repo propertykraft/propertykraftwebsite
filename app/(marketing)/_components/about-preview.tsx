@@ -15,10 +15,10 @@ export function AboutPreview() {
         }}
       />
       <div className="flex flex-col items-center overflow-clip rounded-[inherit] size-full">
-        <div className="content-stretch flex flex-col items-center pb-[56px] md:pb-[112px] pt-[64px] md:pt-[128px] px-[16px] md:px-[32px] relative w-full">
+        <div className="content-stretch flex flex-col items-center pb-[56px] md:pb-[112px] pt-[64px] md:pt-[128px] relative w-full">
           {/* Container */}
           <div
-            className="content-stretch flex flex-col gap-[20px] items-start justify-center max-w-[1200px] relative shrink-0 w-full"
+            className="content-stretch flex flex-col gap-[20px] items-start justify-center max-w-[1200px] mx-auto px-[16px] md:px-[32px] relative shrink-0 w-full"
             data-name="Container"
           >
             {/* Top content */}
